@@ -42,6 +42,24 @@
         ],
         "showPagination": false
       }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/DynamicBuildersGrid.tsx",
+        "staticBuilders": [
+          {
+            "experienceLevel": "Junior",
+            "specialties": [
+              "figma"
+            ],
+            "id": "123",
+            "name": "daniel furtado",
+            "title": "designer",
+            "bio": "product designer"
+          }
+        ]
+      }
     }
   ],
   "seo": {
