@@ -153,8 +153,14 @@ export default function BuilderCard({
                 class="w-16 h-16 rounded-full object-cover border-2 border-[#1d1917]"
               />
               {isL1Certified && (
-                <div class="absolute -top-1 -right-1 w-5 h-5 bg-[#d0ec19] rounded-full flex items-center justify-center">
-                  <Icon id="Discount" size={12} class="text-[#1d1917]" />
+                <div class="absolute -top-1 -right-1 w-6 h-6">
+                  <Image
+                    src="/badge-l1.png"
+                    alt="L1 Certified"
+                    width={24}
+                    height={24}
+                    class="w-6 h-6"
+                  />
                 </div>
               )}
             </div>
@@ -180,9 +186,18 @@ export default function BuilderCard({
                   {experienceLevel}
                 </span>
                 {isL1Certified && (
-                  <span class="px-2 py-1 text-xs rounded-full bg-[#d0ec19] text-[#1d1917] font-medium font-inter">
-                    L1 Certified
-                  </span>
+                  <div class="flex items-center">
+                    <Image
+                      src="/badge-l1.png"
+                      alt="L1 Certified"
+                      width={16}
+                      height={16}
+                      class="w-4 h-4 mr-1"
+                    />
+                    <span class="px-2 py-1 text-xs rounded-full bg-[#d0ec19] text-[#1d1917] font-medium font-inter">
+                      L1 Certified
+                    </span>
+                  </div>
                 )}
               </div>
             </div>

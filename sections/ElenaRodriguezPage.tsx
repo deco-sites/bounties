@@ -27,6 +27,9 @@ export interface Props {
   showBackButton?: boolean;
   backButtonUrl?: string;
   testProp?: string;
+  navbarLogo?: string;
+  navbarButtonText?: string;
+  navbarButtonUrl?: string;
 }
 
 const ELENA_RODRIGUEZ_BUILDER: Builder = {
@@ -53,7 +56,10 @@ export default function ElenaRodriguezPage({
   builder = ELENA_RODRIGUEZ_BUILDER,
   showBackButton = true,
   backButtonUrl = "/builders",
-  testProp = "Elena Rodriguez Page"
+  testProp = "Elena Rodriguez Page",
+  navbarLogo = "/deco-logo-outline.png",
+  navbarButtonText = "Back to Builders",
+  navbarButtonUrl = "/"
 }: Props) {
   
   return (
@@ -64,7 +70,7 @@ export default function ElenaRodriguezPage({
           <div class="flex items-center">
             <a href="/" class="flex items-center">
               <Image
-                src="/deco-logo-outline.png"
+                src={navbarLogo}
                 alt="deco.cx"
                 width={120}
                 height={40}
@@ -74,11 +80,11 @@ export default function ElenaRodriguezPage({
           </div>
           
           <a
-            href="/"
+            href={navbarButtonUrl}
             class="px-4 py-2 border border-[#292524] bg-[#292524] text-[#fafaf9] rounded-lg hover:bg-[#292524]/80 transition-colors font-inter flex items-center"
           >
             <Icon id="ChevronLeft" size={16} class="mr-2" />
-            Back to Builders
+            {navbarButtonText}
           </a>
         </nav>
       )}
@@ -104,9 +110,18 @@ export default function ElenaRodriguezPage({
                     {builder.name}
                   </h1>
                   {builder.isL1Certified && (
-                    <span class="px-3 py-1 bg-[#d0ec19] text-[#1d1917] rounded-full text-sm font-semibold font-inter">
-                      L1 Certified
-                    </span>
+                    <div class="flex items-center">
+                      <Image
+                        src="/badge-l1.png"
+                        alt="L1 Certified"
+                        width={32}
+                        height={32}
+                        class="w-8 h-8"
+                      />
+                      <span class="ml-2 px-3 py-1 bg-[#d0ec19] text-[#1d1917] rounded-full text-sm font-semibold font-inter">
+                        L1 Certified
+                      </span>
+                    </div>
                   )}
                 </div>
                 
