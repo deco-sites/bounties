@@ -7,7 +7,7 @@ Sistema completo para diretório de AI Builders inspirado no **agent.ai/builders
 ## 🎯 Funcionalidades Principais
 
 ### 1. **Página Inicial Dinâmica**
-- **HeroBounties**: Banner principal com busca e CTAs
+- **BuildersGrid**: Grid principal de builders com filtros
 - Campo de busca centralizado
 - Contadores de builders em destaque
 - Call-to-actions para cadastro e login
@@ -40,7 +40,7 @@ Sistema completo para diretório de AI Builders inspirado no **agent.ai/builders
 
 ```
 sections/
-├── HeroBounties.tsx           # Banner principal com busca
+
 ├── BuildersGrid.tsx           # Listagem e filtros de builders  
 ├── BuilderDetail.tsx          # Página de perfil completo
 ├── BuilderPage.tsx            # Página individual de builder ⭐ NOVO
@@ -55,7 +55,7 @@ components/ui/
 
 ### 1. **Criando uma Página Home**
 Adicione as seções nesta ordem:
-1. `HeroBounties` - Banner principal
+1. `BuildersGrid` - Grid principal de builders
 2. `BuildersGrid` - Diretório de builders (opcional na home)
 
 ### 2. **Página de Listagem de Builders**

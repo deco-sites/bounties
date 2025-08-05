@@ -1,4 +1,3 @@
-import HeroBounties from "./HeroBounties.tsx";
 import BuildersGrid from "./BuildersGrid.tsx";
 
 /**
@@ -43,15 +42,7 @@ export default function AIBuildersHome({
 }: Props) {
   return (
     <div class="w-full">
-      {/* Hero Section */}
-      <section class="bg-[#1d1917]">
-        <HeroBounties
-          title={hero.title}
-          description={hero.description}
-          searchPlaceholder={hero.searchPlaceholder}
-          featuredBuilders={hero.featuredBuilders}
-        />
-      </section>
+
 
       {/* Builders Grid Section */}
       <section class="bg-[#1d1917]">
