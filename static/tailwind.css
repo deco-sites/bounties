@@ -3362,9 +3362,6 @@ input.tab:checked + .tab-content,
 .border-b {
   border-bottom-width: 1px;
 }
-.border-l-2 {
-  border-left-width: 2px;
-}
 .border-t {
   border-top-width: 1px;
 }

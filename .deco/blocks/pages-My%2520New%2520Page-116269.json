@@ -6,23 +6,11 @@
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
         "__resolveType": "site/sections/BuilderPage.tsx",
+        "testProp": "#ffffff",
         "builder": {
-          "id": "123",
-          "name": "gabriel chamas",
-          "bio": "ksdjnvsfdjknkln",
-          "fullBio": "kjsdnckjdnsvjknfsjkvnfjkvnk",
-          "experienceLevel": "Junior",
-          "specialties": [
-            "htmx"
-          ],
-          "location": "rio",
-          "experience": [
-            {
-              "technologies": []
-            }
-          ]
-        },
-        "backButtonUrl": "https://sites-bounties--vdqi85.decocdn.com/gabriel"
+          "name": "gabriel",
+          "title": "gabriel"
+        }
       }
     }
   ],

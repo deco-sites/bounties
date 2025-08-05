@@ -44,11 +44,6 @@ export interface Builder {
    */
   isL1Certified: boolean;
   /**
-   * @title Specialties
-   * @description Areas of expertise
-   */
-  specialties: string[];
-  /**
    * @title Location
    * @description Builder's location (optional)
    */
@@ -58,43 +53,6 @@ export interface Builder {
    * @description Technical skills
    */
   skills: string[];
-  /**
-   * @title Experience
-   * @description Work experience
-   */
-  experience: Array<{
-    id: string;
-    position: string;
-    company: string;
-    duration: string;
-    description: string;
-    technologies?: string[];
-  }>;
-  /**
-   * @title Projects
-   * @description Portfolio projects
-   */
-  projects: Array<{
-    id: string;
-    title: string;
-    description: string;
-    image?: ImageWidget;
-    url?: string;
-    githubUrl?: string;
-    technologies: string[];
-    featured: boolean;
-  }>;
-  /**
-   * @title Education
-   * @description Educational background
-   */
-  education: Array<{
-    id: string;
-    degree: string;
-    field: string;
-    institution: string;
-    year: string;
-  }>;
   /**
    * @title Certifications
    * @description Professional certifications
@@ -145,65 +103,8 @@ const DEFAULT_BUILDER: Builder = {
   fullBio: "Sarah is a senior machine learning engineer with over 5 years of experience in computer vision and deep learning. She has worked on production ML systems at scale, including autonomous vehicles, medical imaging, and recommendation systems. Sarah is passionate about making AI more accessible and ethical.",
   experienceLevel: "Senior",
   isL1Certified: true,
-  specialties: ["Computer Vision", "Deep Learning", "PyTorch", "TensorFlow"],
   location: "San Francisco, CA",
   skills: ["Python", "PyTorch", "TensorFlow", "OpenCV", "Docker", "AWS", "Git", "Linux"],
-  experience: [
-    {
-      id: "1",
-      position: "Senior ML Engineer",
-      company: "TechCorp",
-      duration: "2021 - Present",
-      description: "Leading computer vision projects for autonomous systems.",
-      technologies: ["PyTorch", "OpenCV", "Docker", "AWS"]
-    },
-    {
-      id: "2",
-      position: "ML Engineer",
-      company: "AI Startup",
-      duration: "2019 - 2021",
-      description: "Built recommendation systems and NLP models.",
-      technologies: ["TensorFlow", "Scikit-learn", "Python", "PostgreSQL"]
-    }
-  ],
-  projects: [
-    {
-      id: "1",
-      title: "Autonomous Vehicle Perception",
-      description: "Developed computer vision system for autonomous vehicle navigation.",
-      image: "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=400&h=200&fit=crop",
-      url: "https://github.com/sarah-chen/autonomous-vision",
-      githubUrl: "https://github.com/sarah-chen/autonomous-vision",
-      technologies: ["PyTorch", "OpenCV", "ROS", "C++"],
-      featured: true
-    },
-    {
-      id: "2",
-      title: "Medical Image Analysis",
-      description: "AI system for detecting anomalies in medical imaging.",
-      image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=400&h=200&fit=crop",
-      url: "https://github.com/sarah-chen/medical-ai",
-      githubUrl: "https://github.com/sarah-chen/medical-ai",
-      technologies: ["TensorFlow", "DICOM", "Python", "Docker"],
-      featured: true
-    }
-  ],
-  education: [
-    {
-      id: "1",
-      degree: "Master of Science",
-      field: "Computer Science",
-      institution: "Stanford University",
-      year: "2019"
-    },
-    {
-      id: "2",
-      degree: "Bachelor of Science",
-      field: "Computer Science",
-      institution: "UC Berkeley",
-      year: "2017"
-    }
-  ],
   certifications: ["Agentic Engineer L1", "AWS Machine Learning Specialty", "Google Cloud ML Engineer"],
   socialLinks: {
     linkedin: "https://linkedin.com/in/sarah-chen",
@@ -322,114 +223,7 @@ export default function BuilderPage({
             </div>
           </div>
 
-          {/* Experience */}
-          <div class="bg-[#292524] rounded-2xl p-8 mb-8">
-            <h3 class="text-2xl font-bold text-[#fafaf9] mb-6 font-inter">Experience</h3>
-            <div class="space-y-6">
-              {builder.experience.map((exp) => (
-                <div key={exp.id} class="border-l-2 border-[#d0ec19] pl-6">
-                  <div class="flex justify-between items-start mb-2">
-                    <h4 class="text-lg font-semibold text-[#fafaf9] font-inter">
-                      {exp.position}
-                    </h4>
-                    <span class="text-[#a49d9a] text-sm font-inter">
-                      {exp.duration}
-                    </span>
-                  </div>
-                  <p class="text-[#d0ec19] font-inter mb-2">
-                    {exp.company}
-                  </p>
-                  <p class="text-[#a49d9a] font-inter mb-3">
-                    {exp.description}
-                  </p>
-                  {exp.technologies && (
-                    <div class="flex flex-wrap gap-2">
-                      {exp.technologies.map((tech) => (
-                        <span class="px-2 py-1 bg-[#1d1917] text-[#a49d9a] rounded text-xs font-inter">
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
-                  )}
-                </div>
-              ))}
-            </div>
-          </div>
 
-          {/* Projects */}
-          <div class="bg-[#292524] rounded-2xl p-8 mb-8">
-            <h3 class="text-2xl font-bold text-[#fafaf9] mb-6 font-inter">Featured Projects</h3>
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-              {builder.projects.map((project) => (
-                <div key={project.id} class="bg-[#1d1917] rounded-xl p-6">
-                  {project.image && (
-                    <Image
-                      src={project.image || ""}
-                      alt={project.title}
-                      width={400}
-                      height={200}
-                      class="w-full h-32 object-cover rounded-lg mb-4"
-                    />
-                  )}
-                  <h4 class="text-lg font-semibold text-[#fafaf9] mb-2 font-inter">
-                    {project.title}
-                  </h4>
-                  <p class="text-[#a49d9a] text-sm mb-4 font-inter">
-                    {project.description}
-                  </p>
-                  <div class="flex flex-wrap gap-2 mb-4">
-                    {project.technologies.map((tech) => (
-                      <span class="px-2 py-1 bg-[#292524] text-[#a49d9a] rounded text-xs font-inter">
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-                  <div class="flex gap-2">
-                    {project.url && (
-                      <a
-                        href={project.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="px-3 py-1 bg-[#d0ec19] text-[#1d1917] rounded text-sm font-semibold font-inter hover:bg-[#d0ec19]/90 transition-colors"
-                      >
-                        View Project
-                      </a>
-                    )}
-                    {project.githubUrl && (
-                      <a
-                        href={project.githubUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="px-3 py-1 border border-[#292524] text-[#fafaf9] rounded text-sm font-inter hover:bg-[#292524] transition-colors"
-                      >
-                        GitHub
-                      </a>
-                    )}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Education */}
-          <div class="bg-[#292524] rounded-2xl p-8 mb-8">
-            <h3 class="text-2xl font-bold text-[#fafaf9] mb-6 font-inter">Education</h3>
-            <div class="space-y-4">
-              {builder.education.map((edu) => (
-                <div key={edu.id} class="border-l-2 border-[#d0ec19] pl-6">
-                  <h4 class="text-lg font-semibold text-[#fafaf9] font-inter">
-                    {edu.degree} in {edu.field}
-                  </h4>
-                  <p class="text-[#d0ec19] font-inter">
-                    {edu.institution}
-                  </p>
-                  <p class="text-[#a49d9a] text-sm font-inter">
-                    {edu.year}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
 
           {/* Certifications */}
           <div class="bg-[#292524] rounded-2xl p-8 mb-8">
