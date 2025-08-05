@@ -10,14 +10,6 @@ export interface FilterOptions {
 }
 
 export interface Props {
-  /**
-   * @default Our AI Builders
-   */
-  title?: string;
-  /**
-   * @default Discover talented AI professionals ready to bring your projects to life
-   */
-  subtitle?: string;
   builders?: Builder[];
   /**
    * @default card
@@ -131,8 +123,6 @@ const DEFAULT_FILTER_OPTIONS: FilterOptions = {
 };
 
 export default function BuildersGrid({
-  title = "Our AI Builders",
-  subtitle = "Discover talented AI professionals ready to bring your projects to life",
   builders = MOCK_BUILDERS,
   layout = "card",
   showFilters = true,
@@ -144,110 +134,46 @@ export default function BuildersGrid({
   return (
     <div class="w-full bg-[#1d1917] py-16 lg:py-24">
       <div class="container mx-auto px-4">
-        {/* Header */}
-        <div class="text-center mb-12">
-          <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-[#fafaf9] font-inter">{title}</h2>
-          <p class="text-lg text-[#a49d9a] max-w-2xl mx-auto font-inter">{subtitle}</p>
-        </div>
-
-        <div class="flex flex-col lg:flex-row gap-8">
-          {/* Filters Sidebar */}
-          {showFilters && (
-            <div class="lg:w-80 flex-shrink-0">
-              <div class="bg-[#292524] rounded-2xl p-6 border border-[#292524] sticky top-6">
-                <div class="flex items-center justify-between mb-6">
-                  <h3 class="text-lg font-semibold text-[#fafaf9] font-inter">Filters</h3>
-                  <button class="text-[#d0ec19] text-sm hover:text-[#d0ec19]/80 font-inter">
-                    Clear all
+        <div class="flex flex-col gap-8">
+          {/* Main Content */}
+          <div class="flex-1">
+            {/* Results Header */}
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-8 gap-4">
+              <div>
+                <p class="text-[#a49d9a] font-inter">
+                  Showing <span class="font-medium text-[#fafaf9]">{builders.length}</span> builders
+                </p>
+              </div>
+              
+              <div class="flex items-center space-x-4">
+                {/* Layout Toggle */}
+                <div class="flex items-center space-x-2 bg-[#292524] rounded-lg p-1">
+                  <button class={`p-2 rounded-lg transition-colors ${layout === "card" ? "bg-[#d0ec19] text-[#1d1917]" : "text-[#a49d9a] hover:text-[#fafaf9]"}`}>
+                    <Icon id="FilterList" size={16} />
+                  </button>
+                  <button class={`p-2 rounded-lg transition-colors ${layout === "list" ? "bg-[#d0ec19] text-[#1d1917]" : "text-[#a49d9a] hover:text-[#fafaf9]"}`}>
+                    <Icon id="Bars3" size={16} />
                   </button>
                 </div>
 
-                {/* Search */}
-                <div class="mb-6">
-                  <label class="block text-sm font-medium text-[#fafaf9] mb-2 font-inter">
-                    Search
-                  </label>
-                  <div class="relative">
-                    <Icon id="MagnifyingGlass" size={16} class="absolute left-3 top-1/2 transform -translate-y-1/2 text-[#a49d9a]" />
-                    <input
-                      type="text"
-                      placeholder="Search builders..."
-                      class="w-full pl-10 pr-4 py-2 border border-[#1d1917] bg-[#1d1917] text-[#fafaf9] placeholder-[#a49d9a] rounded-lg focus:ring-2 focus:ring-[#d0ec19] focus:border-[#d0ec19] outline-none font-inter"
-                    />
-                  </div>
-                </div>
+                {/* Filters Button */}
+                {showFilters && (
+                  <button class="px-4 py-2 border border-[#292524] bg-[#292524] text-[#fafaf9] rounded-lg hover:bg-[#292524]/80 transition-colors font-inter">
+                    <Icon id="FilterList" size={16} class="mr-2" />
+                    Filters
+                  </button>
+                )}
 
-                {/* Certification Filter */}
-                <div class="mb-6">
-                  <label class="block text-sm font-medium text-[#fafaf9] mb-3 font-inter">
-                    Certification
-                  </label>
-                  <label class="flex items-center space-x-2">
-                    <input type="checkbox" class="rounded border-[#a49d9a] text-[#d0ec19] focus:ring-[#d0ec19] bg-[#1d1917]" />
-                    <span class="text-sm text-[#a49d9a] font-inter">Agentic Engineer L1 Only</span>
-                  </label>
-                </div>
-
-                {/* Specialties Filter */}
-                <div class="mb-6">
-                  <label class="block text-sm font-medium text-[#fafaf9] mb-3 font-inter">
-                    Specialties
-                  </label>
-                  <div class="space-y-2 max-h-40 overflow-y-auto">
-                    {filterOptions.specialties.map((specialty) => (
-                      <label key={specialty} class="flex items-center space-x-2">
-                        <input type="checkbox" class="rounded border-[#a49d9a] text-[#d0ec19] focus:ring-[#d0ec19] bg-[#1d1917]" />
-                        <span class="text-sm text-[#a49d9a] font-inter">{specialty}</span>
-                      </label>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Experience Level */}
-                <div class="mb-6">
-                  <label class="block text-sm font-medium text-[#fafaf9] mb-3 font-inter">
-                    Experience Level
-                  </label>
-                  <div class="space-y-2">
-                    {filterOptions.experienceLevels.map((level) => (
-                      <label key={level} class="flex items-center space-x-2">
-                        <input type="checkbox" class="rounded border-[#a49d9a] text-[#d0ec19] focus:ring-[#d0ec19] bg-[#1d1917]" />
-                        <span class="text-sm text-[#a49d9a] font-inter">{level}</span>
-                      </label>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Price Range */}
-                <div class="mb-6">
-                  <label class="block text-sm font-medium text-[#fafaf9] mb-3 font-inter">
-                    Hourly Rate
-                  </label>
-                  <div class="space-y-2">
-                    {filterOptions.priceRanges.map((range) => (
-                      <label key={range.label} class="flex items-center space-x-2">
-                        <input type="checkbox" class="rounded border-[#a49d9a] text-[#d0ec19] focus:ring-[#d0ec19] bg-[#1d1917]" />
-                        <span class="text-sm text-[#a49d9a] font-inter">{range.label}</span>
-                      </label>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Location */}
-                <div class="mb-6">
-                  <label class="block text-sm font-medium text-[#fafaf9] mb-3 font-inter">
-                    Location
-                  </label>
-                  <div class="space-y-2 max-h-32 overflow-y-auto">
-                    {filterOptions.locations.map((location) => (
-                      <label key={location} class="flex items-center space-x-2">
-                        <input type="checkbox" class="rounded border-[#a49d9a] text-[#d0ec19] focus:ring-[#d0ec19] bg-[#1d1917]" />
-                        <span class="text-sm text-[#a49d9a] font-inter">{location}</span>
-                      </label>
-                    ))}
-                  </div>
-                </div>
+                {/* Sort */}
+                <select class="border border-[#292524] bg-[#292524] text-[#fafaf9] rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-[#d0ec19] focus:border-[#d0ec19] outline-none font-inter">
+                  <option>Sort by: Relevance</option>
+                  <option>Sort by: Rating</option>
+                  <option>Sort by: Price (Low to High)</option>
+                  <option>Sort by: Price (High to Low)</option>
+                  <option>Sort by: Projects</option>
+                </select>
               </div>
+            </div>
             </div>
           )}
 
@@ -271,6 +197,14 @@ export default function BuildersGrid({
                     <Icon id="Bars3" size={16} />
                   </button>
                 </div>
+
+                {/* Filters Button */}
+                {showFilters && (
+                  <button class="px-4 py-2 border border-[#292524] bg-[#292524] text-[#fafaf9] rounded-lg hover:bg-[#292524]/80 transition-colors font-inter">
+                    <Icon id="FilterList" size={16} class="mr-2" />
+                    Filters
+                  </button>
+                )}
 
                 {/* Sort */}
                 <select class="border border-[#292524] bg-[#292524] text-[#fafaf9] rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-[#d0ec19] focus:border-[#d0ec19] outline-none font-inter">
