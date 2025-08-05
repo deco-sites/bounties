@@ -1049,17 +1049,6 @@ html {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
 }
-.hero {
-  display: grid;
-  width: 100%;
-  place-items: center;
-  background-size: cover;
-  background-position: center;
-}
-.hero > * {
-  grid-column-start: 1;
-  grid-row-start: 1;
-}
 .input {
   flex-shrink: 1;
   -webkit-appearance: none;
@@ -3356,10 +3345,6 @@ input.tab:checked + .tab-content,
   --tw-border-opacity: 1;
   border-color: rgb(164 157 154 / var(--tw-border-opacity));
 }
-.border-\[\#d0ec19\] {
-  --tw-border-opacity: 1;
-  border-color: rgb(208 236 25 / var(--tw-border-opacity));
-}
 .border-\[\#d0ec19\]\/30 {
   border-color: rgb(208 236 25 / 0.3);
 }
@@ -4079,20 +4064,12 @@ input.tab:checked + .tab-content,
 .hover\:bg-\[\#292524\]\/80:hover {
   background-color: rgb(41 37 36 / 0.8);
 }
-.hover\:bg-\[\#d0ec19\]:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(208 236 25 / var(--tw-bg-opacity));
-}
 .hover\:bg-\[\#d0ec19\]\/90:hover {
   background-color: rgb(208 236 25 / 0.9);
 }
 .hover\:bg-blue-700:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(29 78 216 / var(--tw-bg-opacity));
-}
-.hover\:text-\[\#1d1917\]:hover {
-  --tw-text-opacity: 1;
-  color: rgb(29 25 23 / var(--tw-text-opacity));
 }
 .hover\:text-\[\#d0ec19\]\/80:hover {
   color: rgb(208 236 25 / 0.8);
@@ -4300,10 +4277,6 @@ input.tab:checked + .tab-content,
 
   .md\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .md\:grid-cols-4 {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
   .md\:flex-row {
