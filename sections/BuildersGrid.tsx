@@ -11,10 +11,6 @@ export interface FilterOptions {
 
 export interface Props {
   builders?: Builder[];
-  /**
-   * @default card
-   */
-  layout?: "card" | "list";
   showFilters?: boolean;
   showPagination?: boolean;
   itemsPerPage?: number;
@@ -124,7 +120,6 @@ const DEFAULT_FILTER_OPTIONS: FilterOptions = {
 
 export default function BuildersGrid({
   builders = MOCK_BUILDERS,
-  layout = "card",
   showFilters = true,
   showPagination = true,
   itemsPerPage: _itemsPerPage = 12,
@@ -146,19 +141,9 @@ export default function BuildersGrid({
               </div>
               
               <div class="flex items-center space-x-4">
-                {/* Layout Toggle */}
-                <div class="flex items-center space-x-2 bg-[#292524] rounded-lg p-1">
-                  <button class={`p-2 rounded-lg transition-colors ${layout === "card" ? "bg-[#d0ec19] text-[#1d1917]" : "text-[#a49d9a] hover:text-[#fafaf9]"}`}>
-                    <Icon id="FilterList" size={16} />
-                  </button>
-                  <button class={`p-2 rounded-lg transition-colors ${layout === "list" ? "bg-[#d0ec19] text-[#1d1917]" : "text-[#a49d9a] hover:text-[#fafaf9]"}`}>
-                    <Icon id="Bars3" size={16} />
-                  </button>
-                </div>
-
                 {/* Filters Button */}
                 {showFilters && (
-                  <button class="px-4 py-2 border border-[#292524] bg-[#292524] text-[#fafaf9] rounded-lg hover:bg-[#292524]/80 transition-colors font-inter">
+                  <button class="px-4 py-2 border border-[#292524] bg-[#292524] text-[#fafaf9] rounded-lg hover:bg-[#292524]/80 transition-colors font-inter flex items-center">
                     <Icon id="FilterList" size={16} class="mr-2" />
                     Filters
                   </button>
@@ -175,17 +160,12 @@ export default function BuildersGrid({
               </div>
             </div>
 
-            {/* Builders Grid/List */}
-            <div class={`${
-              layout === "card" 
-                ? "grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6" 
-                : "space-y-4"
-            }`}>
+            {/* Builders Grid */}
+            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
               {builders.map((builder) => (
                 <BuilderCard 
                   key={builder.id} 
                   builder={builder} 
-                  layout={layout}
                 />
               ))}
             </div>

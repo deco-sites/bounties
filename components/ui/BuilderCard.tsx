@@ -217,14 +217,7 @@ export default function BuilderCard({
           </div>
         )}
 
-        {/* Footer */}
-        <div class="px-6 py-4 bg-[#1d1917] border-t border-[#1d1917]">
-          <div class="flex items-center justify-between text-sm text-[#a49d9a] font-inter">
-            <div class="flex items-center space-x-3">
-              {/* Empty for now - could add other info later */}
-            </div>
-          </div>
-        </div>
+
       </div>
     </a>
   );
