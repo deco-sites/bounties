@@ -186,18 +186,9 @@ export default function BuilderCard({
                   {experienceLevel}
                 </span>
                 {isL1Certified && (
-                  <div class="flex items-center">
-                    <Image
-                      src="https://assets.decocache.com/bounties/c61bbf50-e820-4910-be4a-0e39c96b7ce9/badge-l1.png"
-                      alt="L1 Certified"
-                      width={16}
-                      height={16}
-                      class="w-4 h-4 mr-1"
-                    />
-                    <span class="px-2 py-1 text-xs rounded-full bg-[#d0ec19] text-[#1d1917] font-medium font-inter">
-                      L1 Certified
-                    </span>
-                  </div>
+                  <span class="px-2 py-1 text-xs rounded-full bg-[#d0ec19] text-[#1d1917] font-medium font-inter">
+                    L1 Certified
+                  </span>
                 )}
               </div>
             </div>

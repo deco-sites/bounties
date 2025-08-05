@@ -2709,9 +2709,6 @@ input.tab:checked + .tab-content,
 .ml-4 {
   margin-left: 1rem;
 }
-.mr-1 {
-  margin-right: 0.25rem;
-}
 .mr-2 {
   margin-right: 0.5rem;
 }
@@ -4531,11 +4528,6 @@ input.tab:checked + .tab-content,
   .lg\:py-14 {
     padding-top: 3.5rem;
     padding-bottom: 3.5rem;
-  }
-
-  .lg\:py-24 {
-    padding-top: 6rem;
-    padding-bottom: 6rem;
   }
 
   .lg\:py-28 {
