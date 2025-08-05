@@ -44,7 +44,7 @@ export default function AIBuildersHome({
   return (
     <div class="w-full">
       {/* Hero Section */}
-      <section class="bg-gradient-to-br from-blue-50 to-indigo-100">
+      <section class="bg-[#1d1917]">
         <HeroBounties
           title={hero.title}
           description={hero.description}
