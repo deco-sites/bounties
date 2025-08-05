@@ -20,7 +20,7 @@ export interface Props {
 // Mock data for demonstration
 const MOCK_BUILDERS: Builder[] = [
   {
-    id: "1",
+    id: "sarah-chen",
     name: "Sarah Chen",
     title: "Machine Learning Engineer",
     avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b2a2?w=150&h=150&fit=crop&crop=face",
@@ -36,7 +36,7 @@ const MOCK_BUILDERS: Builder[] = [
     price: { currency: "$", amount: 120, period: "hour" }
   },
   {
-    id: "2",
+    id: "marcus-johnson",
     name: "Marcus Johnson",
     title: "NLP Specialist",
     avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
@@ -52,7 +52,7 @@ const MOCK_BUILDERS: Builder[] = [
     price: { currency: "$", amount: 150, period: "hour" }
   },
   {
-    id: "3",
+    id: "elena-rodriguez",
     name: "Elena Rodriguez",
     title: "AI Product Manager",
     avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face",
@@ -68,7 +68,7 @@ const MOCK_BUILDERS: Builder[] = [
     price: { currency: "$", amount: 100, period: "hour" }
   },
   {
-    id: "4",
+    id: "david-kim",
     name: "David Kim",
     title: "Robotics Engineer",
     avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
@@ -82,6 +82,70 @@ const MOCK_BUILDERS: Builder[] = [
     profileUrl: "/builder/david-kim",
     skills: ["ROS", "C++", "Python", "OpenCV", "LIDAR", "SLAM"],
     price: { currency: "$", amount: 140, period: "hour" }
+  },
+  {
+    id: "alexandra-wang",
+    name: "Alexandra Wang",
+    title: "Data Scientist",
+    avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&h=150&fit=crop&crop=face",
+    bio: "Data scientist specializing in predictive analytics and machine learning for healthcare applications.",
+    specialties: ["Predictive Analytics", "Healthcare AI", "Machine Learning"],
+    isL1Certified: true,
+    experienceLevel: "Mid",
+    location: "Boston, MA",
+    rating: 4.6,
+    projectsCount: 15,
+    profileUrl: "/builder/alexandra-wang",
+    skills: ["Python", "R", "SQL", "Scikit-learn", "Pandas", "Tableau"],
+    price: { currency: "$", amount: 90, period: "hour" }
+  },
+  {
+    id: "michael-chen",
+    name: "Michael Chen",
+    title: "AI Research Engineer",
+    avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face",
+    bio: "Research engineer focused on cutting-edge AI algorithms and neural network architectures.",
+    specialties: ["AI Research", "Neural Networks", "Deep Learning"],
+    isL1Certified: true,
+    experienceLevel: "Expert",
+    location: "Palo Alto, CA",
+    rating: 4.9,
+    projectsCount: 22,
+    profileUrl: "/builder/michael-chen",
+    skills: ["PyTorch", "TensorFlow", "CUDA", "JAX", "Research", "Papers"],
+    price: { currency: "$", amount: 180, period: "hour" }
+  },
+  {
+    id: "sophia-martinez",
+    name: "Sophia Martinez",
+    title: "MLOps Engineer",
+    avatar: "https://images.unsplash.com/photo-1487412720507-7e378adf7ca3?w=150&h=150&fit=crop&crop=face",
+    bio: "MLOps specialist building scalable machine learning infrastructure and deployment pipelines.",
+    specialties: ["MLOps", "DevOps", "Cloud Infrastructure"],
+    isL1Certified: false,
+    experienceLevel: "Senior",
+    location: "Denver, CO",
+    rating: 4.5,
+    projectsCount: 19,
+    profileUrl: "/builder/sophia-martinez",
+    skills: ["Kubernetes", "Docker", "AWS", "Azure", "CI/CD", "Monitoring"],
+    price: { currency: "$", amount: 110, period: "hour" }
+  },
+  {
+    id: "james-wilson",
+    name: "James Wilson",
+    title: "Computer Vision Engineer",
+    avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
+    bio: "Computer vision engineer developing advanced image processing and object detection systems.",
+    specialties: ["Computer Vision", "Image Processing", "Object Detection"],
+    isL1Certified: true,
+    experienceLevel: "Senior",
+    location: "Los Angeles, CA",
+    rating: 4.7,
+    projectsCount: 28,
+    profileUrl: "/builder/james-wilson",
+    skills: ["OpenCV", "PyTorch", "TensorFlow", "C++", "CUDA", "Computer Vision"],
+    price: { currency: "$", amount: 130, period: "hour" }
   }
 ];
 
