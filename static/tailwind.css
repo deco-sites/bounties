@@ -3623,6 +3623,9 @@ input.tab:checked + .tab-content,
   padding-top: 2rem;
   padding-bottom: 2rem;
 }
+.pb-0 {
+  padding-bottom: 0px;
+}
 .pb-12 {
   padding-bottom: 3rem;
 }
@@ -3658,6 +3661,9 @@ input.tab:checked + .tab-content,
 }
 .pr-6 {
   padding-right: 1.5rem;
+}
+.pt-0 {
+  padding-top: 0px;
 }
 .pt-12 {
   padding-top: 3rem;
@@ -4517,11 +4523,6 @@ input.tab:checked + .tab-content,
     padding-right: 2rem;
   }
 
-  .lg\:py-12 {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-  }
-
   .lg\:py-14 {
     padding-top: 3.5rem;
     padding-bottom: 3.5rem;
@@ -4530,11 +4531,6 @@ input.tab:checked + .tab-content,
   .lg\:py-28 {
     padding-top: 7rem;
     padding-bottom: 7rem;
-  }
-
-  .lg\:py-6 {
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
   }
 
   .lg\:pb-16 {
@@ -4549,6 +4545,10 @@ input.tab:checked + .tab-content,
     padding-bottom: 7rem;
   }
 
+  .lg\:pb-6 {
+    padding-bottom: 1.5rem;
+  }
+
   .lg\:pt-20 {
     padding-top: 5rem;
   }
@@ -4559,6 +4559,10 @@ input.tab:checked + .tab-content,
 
   .lg\:pt-36 {
     padding-top: 9rem;
+  }
+
+  .lg\:pt-6 {
+    padding-top: 1.5rem;
   }
 
   .lg\:text-4xl {
