@@ -1,63 +1,14 @@
 import { ImageWidget } from "apps/admin/widgets.ts";
 import Image from "apps/website/components/Image.tsx";
 import Icon from "site/components/ui/Icon.tsx";
-import BuilderDetail from "./BuilderDetail.tsx";
-
-export interface Builder {
-  id: string;
-  name: string;
-  title: string;
-  avatar: string;
-  bio: string;
-  fullBio: string;
-  experienceLevel: "Junior" | "Mid" | "Senior" | "Expert";
-  isL1Certified: boolean;
-  specialties: string[];
-  location?: string;
-  availability: "Available" | "Busy" | "Unavailable";
-  rating?: number;
-  responseTime?: string;
-  experience: Array<{
-    id: string;
-    position: string;
-    company: string;
-    duration: string;
-    description: string;
-    technologies?: string[];
-  }>;
-  projects: Array<{
-    id: string;
-    title: string;
-    description: string;
-    image?: string;
-    url?: string;
-    githubUrl?: string;
-    technologies: string[];
-    featured: boolean;
-  }>;
-  skills: string[];
-  certifications: string[];
-  education: Array<{
-    id: string;
-    degree: string;
-    field: string;
-    institution: string;
-    year: string;
-  }>;
-  socialLinks?: {
-    linkedin?: string;
-    github?: string;
-    website?: string;
-    twitter?: string;
-  };
-}
+import BuilderDetail, { type DetailedBuilder } from "./BuilderDetail.tsx";
 
 export interface Props {
   /**
    * @title Builder Data
    * @description Complete builder information
    */
-  builder?: Builder;
+  builder?: DetailedBuilder;
   /**
    * @title Show Back Button
    * @default true
@@ -71,7 +22,7 @@ export interface Props {
 }
 
 // Default builder data
-const DEFAULT_BUILDER: Builder = {
+const DEFAULT_BUILDER: DetailedBuilder = {
   id: "sarah-chen",
   name: "Sarah Chen",
   title: "Machine Learning Engineer",
@@ -85,6 +36,10 @@ const DEFAULT_BUILDER: Builder = {
   availability: "Available",
   rating: 4.9,
   responseTime: "Usually responds in 2 hours",
+  profileUrl: "/builder/sarah-chen",
+  skills: ["Python", "PyTorch", "TensorFlow", "OpenCV", "Docker", "AWS", "Git", "Linux"],
+  projectsCount: 24,
+  price: { currency: "$", amount: 120, period: "hour" },
   experience: [
     {
       id: "1",
