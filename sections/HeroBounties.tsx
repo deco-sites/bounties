@@ -23,6 +23,18 @@ export interface Props {
    * @default 3
    */
   featuredBuilders?: number;
+  /**
+   * @default /deco-logo-outline.png
+   */
+  navbarLogo?: string;
+  /**
+   * @default Join as Builder
+   */
+  navbarButtonText?: string;
+  /**
+   * @default /signup
+   */
+  navbarButtonUrl?: string;
 }
 
 export default function HeroBounties({
@@ -31,6 +43,9 @@ export default function HeroBounties({
   searchPlaceholder = "Search builders by name, specialty, or certification...",
   backgroundImage,
   featuredBuilders = 3,
+  navbarLogo = "/deco-logo-outline.png",
+  navbarButtonText = "Join as Builder",
+  navbarButtonUrl = "/signup",
 }: Props) {
   return (
     <div class="relative w-full bg-[#1d1917] min-h-screen">
@@ -39,7 +54,7 @@ export default function HeroBounties({
         {/* Logo */}
         <div class="flex items-center">
           <Image
-            src="/deco-logo-outline.png"
+            src={navbarLogo}
             alt="deco.cx"
             width={120}
             height={40}
@@ -49,10 +64,10 @@ export default function HeroBounties({
         
         {/* CTA Button */}
         <a
-          href="/signup"
+          href={navbarButtonUrl}
           class="px-6 py-2 bg-[#d0ec19] text-[#1d1917] rounded-full font-semibold hover:bg-[#d0ec19]/90 transition-all duration-200 font-inter"
         >
-          Join as Builder
+          {navbarButtonText}
         </a>
       </nav>
 
