@@ -3623,11 +3623,11 @@ input.tab:checked + .tab-content,
   padding-top: 2rem;
   padding-bottom: 2rem;
 }
+.pb-0 {
+  padding-bottom: 0px;
+}
 .pb-12 {
   padding-bottom: 3rem;
-}
-.pb-2 {
-  padding-bottom: 0.5rem;
 }
 .pb-4 {
   padding-bottom: 1rem;
@@ -4557,12 +4557,12 @@ input.tab:checked + .tab-content,
     padding-top: 7rem;
   }
 
-  .lg\:pt-36 {
-    padding-top: 9rem;
+  .lg\:pt-3 {
+    padding-top: 0.75rem;
   }
 
-  .lg\:pt-6 {
-    padding-top: 1.5rem;
+  .lg\:pt-36 {
+    padding-top: 9rem;
   }
 
   .lg\:text-4xl {
