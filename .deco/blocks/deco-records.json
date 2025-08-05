@@ -1,0 +1,9 @@
+{
+  "__resolveType": "site/apps/deco/records.ts",
+  "url": "libsql://bounties-decocx.turso.io",
+  "authToken": {
+    "__resolveType": "website/loaders/secret.ts",
+    "name": "DATABASE_AUTH_TOKEN",
+    "encrypted": "4fd755dbcd2b409e35244235218ab9cebe6d9bedc6ad03f72af65c14bda82155d902e933fbed49ceb388778996c2ad72ddccc3ddca6c92841d3a857a2c1f99aacf7fcb74918a8a68093f384885221114cf223324c348b2b016ce895090503272d037791c67cd05d6534e408546471e6290927b1b44b47cd8c58f73c09f80130018fbf0dab76ad6d41c0c709e0bdd4aa7cbff36c5bdbc7172837b51507e5df480c2dd1c2662da711d095932fde7c3d25b68c9a68dc827c13ce2a1f8080e662a0824d085b55fb006fc1a93e6798770cf109992f86e53ed7dfb1dd0569f330aba7e"
+  }
+}
