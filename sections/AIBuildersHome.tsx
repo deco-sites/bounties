@@ -58,7 +58,7 @@ export default function AIBuildersHome({
       </section>
 
       {/* Builders Grid Section */}
-      <section class="bg-white">
+      <section class="bg-[#1d1917]">
         <BuildersGrid
           title={buildersGrid.title}
           subtitle={buildersGrid.subtitle}
@@ -70,25 +70,25 @@ export default function AIBuildersHome({
       </section>
 
       {/* Call to Action Section */}
-      <section class="bg-gradient-to-r from-blue-600 to-purple-600 py-20">
+      <section class="bg-[#292524] py-20">
         <div class="container mx-auto px-4 text-center">
-          <div class="max-w-3xl mx-auto text-white">
-            <h2 class="text-3xl md:text-4xl font-bold mb-6">
+          <div class="max-w-3xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6 text-[#fafaf9] font-inter">
               Ready to Connect with AI Experts?
             </h2>
-            <p class="text-xl mb-8 opacity-90">
+            <p class="text-xl mb-8 text-[#a49d9a] font-inter">
               Join our community of certified AI builders and take your projects to the next level.
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/signup"
-                class="px-8 py-4 bg-white text-blue-600 rounded-xl font-semibold hover:bg-gray-100 transition-colors"
+                class="px-8 py-4 bg-[#d0ec19] text-[#1d1917] rounded-xl font-semibold hover:bg-[#d0ec19]/90 transition-all duration-300 hover:shadow-lg hover:shadow-[#d0ec19]/25 font-inter"
               >
                 Sign Up as Builder
               </a>
               <a
                 href="/builders"
-                class="px-8 py-4 border-2 border-white text-white rounded-xl font-semibold hover:bg-white hover:text-blue-600 transition-colors"
+                class="px-8 py-4 border-2 border-[#d0ec19] text-[#d0ec19] rounded-xl font-semibold hover:bg-[#d0ec19] hover:text-[#1d1917] transition-all duration-300 font-inter"
               >
                 Browse All Builders
               </a>
@@ -98,24 +98,24 @@ export default function AIBuildersHome({
       </section>
 
       {/* Stats Section */}
-      <section class="bg-gray-50 py-16">
+      <section class="bg-[#1d1917] py-16">
         <div class="container mx-auto px-4">
           <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
             <div class="space-y-2">
-              <div class="text-4xl font-bold text-blue-600">300+</div>
-              <div class="text-gray-600">AI Builders</div>
+              <div class="text-4xl font-bold text-[#d0ec19] font-inter">300+</div>
+              <div class="text-[#a49d9a] font-inter">AI Builders</div>
             </div>
             <div class="space-y-2">
-              <div class="text-4xl font-bold text-purple-600">150+</div>
-              <div class="text-gray-600">L1 Certified</div>
+              <div class="text-4xl font-bold text-[#d0ec19] font-inter">150+</div>
+              <div class="text-[#a49d9a] font-inter">L1 Certified</div>
             </div>
             <div class="space-y-2">
-              <div class="text-4xl font-bold text-green-600">1200+</div>
-              <div class="text-gray-600">Projects Completed</div>
+              <div class="text-4xl font-bold text-[#d0ec19] font-inter">1200+</div>
+              <div class="text-[#a49d9a] font-inter">Projects Completed</div>
             </div>
             <div class="space-y-2">
-              <div class="text-4xl font-bold text-orange-600">98%</div>
-              <div class="text-gray-600">Client Satisfaction</div>
+              <div class="text-4xl font-bold text-[#d0ec19] font-inter">98%</div>
+              <div class="text-[#a49d9a] font-inter">Client Satisfaction</div>
             </div>
           </div>
         </div>

@@ -227,12 +227,6 @@ export default function BuilderCard({
                   <span>{location}</span>
                 </div>
               )}
-              {rating && (
-                <div class="flex items-center space-x-1">
-                  <Icon id="Heart" size={12} class="text-[#d0ec19]" />
-                  <span>{rating.toFixed(1)}</span>
-                </div>
-              )}
             </div>
           </div>
         </div>

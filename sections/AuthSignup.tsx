@@ -91,32 +91,32 @@ export default function AuthSignup({
       </div>
 
       {/* Right Side - Form */}
-      <div class="flex-1 flex items-center justify-center px-4 sm:px-6 lg:px-8 bg-white">
+      <div class="flex-1 flex items-center justify-center px-4 sm:px-6 lg:px-8 bg-[#1d1917]">
         <div class="max-w-md w-full space-y-8">
           {/* Header */}
           <div class="text-center">
-            <h2 class="text-3xl font-bold text-gray-900 mb-2">{title}</h2>
-            <p class="text-gray-600">{subtitle}</p>
+            <h2 class="text-3xl font-bold text-[#fafaf9] mb-2 font-inter">{title}</h2>
+            <p class="text-[#a49d9a] font-inter">{subtitle}</p>
           </div>
 
           {/* Social Signup */}
           {showSocialSignup && (
             <div class="space-y-3">
-              <button class="w-full flex items-center justify-center px-4 py-3 border border-gray-300 rounded-xl text-gray-700 bg-white hover:bg-gray-50 transition-colors">
+              <button class="w-full flex items-center justify-center px-4 py-3 border border-[#292524] rounded-xl text-[#fafaf9] bg-[#292524] hover:bg-[#292524]/80 transition-colors font-inter">
                 <Icon id="Logo" size={20} class="mr-3" />
                 Sign up with Google
               </button>
-              <button class="w-full flex items-center justify-center px-4 py-3 border border-gray-300 rounded-xl text-gray-700 bg-white hover:bg-gray-50 transition-colors">
+              <button class="w-full flex items-center justify-center px-4 py-3 border border-[#292524] rounded-xl text-[#fafaf9] bg-[#292524] hover:bg-[#292524]/80 transition-colors font-inter">
                 <Icon id="Linkedin" size={20} class="mr-3" />
                 Sign up with LinkedIn
               </button>
               
               <div class="relative">
                 <div class="absolute inset-0 flex items-center">
-                  <div class="w-full border-t border-gray-300" />
+                  <div class="w-full border-t border-[#292524]" />
                 </div>
                 <div class="relative flex justify-center text-sm">
-                  <span class="px-2 bg-white text-gray-500">Or sign up with email</span>
+                  <span class="px-2 bg-[#1d1917] text-[#a49d9a] font-inter">Or sign up with email</span>
                 </div>
               </div>
             </div>
@@ -126,7 +126,7 @@ export default function AuthSignup({
           <form class="space-y-6" action={redirectUrl} method="POST">
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
-                <label htmlFor="firstName" class="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="firstName" class="block text-sm font-medium text-[#fafaf9] mb-2 font-inter">
                   First name
                 </label>
                 <input
@@ -135,12 +135,12 @@ export default function AuthSignup({
                   type="text"
                   autoComplete="given-name"
                   required
-                  class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all"
+                  class="w-full px-4 py-3 border border-[#292524] bg-[#292524] text-[#fafaf9] placeholder-[#a49d9a] rounded-xl focus:ring-2 focus:ring-[#d0ec19] focus:border-[#d0ec19] outline-none transition-all font-inter"
                   placeholder="John"
                 />
               </div>
               <div>
-                <label htmlFor="lastName" class="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="lastName" class="block text-sm font-medium text-[#fafaf9] mb-2 font-inter">
                   Last name
                 </label>
                 <input
@@ -149,14 +149,14 @@ export default function AuthSignup({
                   type="text"
                   autoComplete="family-name"
                   required
-                  class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all"
+                  class="w-full px-4 py-3 border border-[#292524] bg-[#292524] text-[#fafaf9] placeholder-[#a49d9a] rounded-xl focus:ring-2 focus:ring-[#d0ec19] focus:border-[#d0ec19] outline-none transition-all font-inter"
                   placeholder="Doe"
                 />
               </div>
             </div>
 
             <div>
-              <label htmlFor="email" class="block text-sm font-medium text-gray-700 mb-2">
+              <label htmlFor="email" class="block text-sm font-medium text-[#fafaf9] mb-2 font-inter">
                 Email address
               </label>
               <input
@@ -165,7 +165,7 @@ export default function AuthSignup({
                 type="email"
                 autoComplete="email"
                 required
-                class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all"
+                class="w-full px-4 py-3 border border-[#292524] bg-[#292524] text-[#fafaf9] placeholder-[#a49d9a] rounded-xl focus:ring-2 focus:ring-[#d0ec19] focus:border-[#d0ec19] outline-none transition-all font-inter"
                 placeholder="john@example.com"
               />
             </div>

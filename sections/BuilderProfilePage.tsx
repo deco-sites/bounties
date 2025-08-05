@@ -30,13 +30,13 @@ export default function BuilderProfilePage({
       
       {/* Related Builders */}
       {showRelatedBuilders && (
-        <section class="bg-gray-50 py-16">
+        <section class="bg-[#1d1917] py-16">
           <div class="container mx-auto px-4">
             <div class="text-center mb-12">
-              <h2 class="text-3xl font-bold text-gray-900 mb-4">
+              <h2 class="text-3xl font-bold text-[#fafaf9] mb-4 font-inter">
                 {relatedBuildersTitle}
               </h2>
-              <p class="text-gray-600">
+              <p class="text-[#a49d9a] font-inter">
                 Discover other talented AI professionals you might be interested in
               </p>
             </div>
@@ -53,7 +53,7 @@ export default function BuilderProfilePage({
             <div class="text-center mt-12">
               <a
                 href="/builders"
-                class="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-xl font-medium hover:bg-blue-700 transition-colors"
+                class="inline-flex items-center px-6 py-3 bg-[#d0ec19] text-[#1d1917] rounded-xl font-semibold hover:bg-[#d0ec19]/90 transition-all duration-300 hover:shadow-lg hover:shadow-[#d0ec19]/25 font-inter"
               >
                 View All Builders
                 <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

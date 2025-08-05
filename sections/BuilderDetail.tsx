@@ -257,12 +257,7 @@ export default function BuilderDetail({ builder = MOCK_DETAILED_BUILDER }: Props
                           <span>{location}</span>
                         </div>
                       )}
-                      {rating && (
-                        <div class="flex items-center gap-1">
-                          <Icon id="Heart" size={16} class="text-[#d0ec19]" />
-                          <span>{rating.toFixed(1)}</span>
-                        </div>
-                      )}
+
                       {responseTime && (
                         <div class="flex items-center gap-1">
                           <Icon id="Phone" size={16} />
@@ -330,49 +325,7 @@ export default function BuilderDetail({ builder = MOCK_DETAILED_BUILDER }: Props
                 </div>
               </section>
 
-              {/* Projects */}
-              <section>
-                <h2 class="text-2xl font-bold mb-6 text-[#fafaf9] font-inter">Featured Projects</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  {projects.filter(p => p.featured).map((project) => (
-                    <div key={project.id} class="border border-[#292524] bg-[#292524] rounded-xl overflow-hidden hover:shadow-lg hover:shadow-[#d0ec19]/10 transition-all duration-300 hover:border-[#d0ec19]/30">
-                      {project.image && (
-                        <Image
-                          src={project.image}
-                          alt={project.title}
-                          width={400}
-                          height={200}
-                          class="w-full h-48 object-cover"
-                        />
-                      )}
-                      <div class="p-6">
-                        <h3 class="text-lg font-semibold mb-2 text-[#fafaf9] font-inter">{project.title}</h3>
-                        <p class="text-[#a49d9a] text-sm mb-4 font-inter">{project.description}</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                          {project.technologies.slice(0, 3).map((tech) => (
-                            <span key={tech} class="px-3 py-1 bg-[#d0ec19]/20 text-[#d0ec19] text-xs rounded-lg border border-[#d0ec19]/30 font-inter">
-                              {tech}
-                            </span>
-                          ))}
-                          {project.technologies.length > 3 && (
-                            <span class="px-3 py-1 bg-[#1d1917] text-[#a49d9a] text-xs rounded-lg border border-[#1d1917] font-inter">
-                              +{project.technologies.length - 3}
-                            </span>
-                          )}
-                        </div>
-                        <div class="flex gap-3">
-                          {project.url && (
-                            <a href={project.url} class="text-[#d0ec19] hover:text-[#d0ec19]/80 text-sm font-inter">Live Demo</a>
-                          )}
-                          {project.githubUrl && (
-                            <a href={project.githubUrl} class="text-[#d0ec19] hover:text-[#d0ec19]/80 text-sm font-inter">GitHub</a>
-                          )}
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </section>
+
             </div>
 
             {/* Sidebar */}
