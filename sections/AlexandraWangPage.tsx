@@ -58,11 +58,6 @@ export default function AlexandraWangPage({
   
   return (
     <div class="w-full bg-[#1d1917] min-h-screen">
-      {/* Test Banner */}
-      <div class="bg-[#d0ec19] text-[#1d1917] p-4 text-center font-bold">
-        Test Prop Value: {testProp}
-      </div>
-
       {/* Navbar */}
       {showBackButton && (
         <nav class="relative z-20 flex items-center justify-between px-6 py-4 lg:px-8">
@@ -79,7 +74,7 @@ export default function AlexandraWangPage({
           </div>
           
           <a
-            href={backButtonUrl}
+            href="/"
             class="px-4 py-2 border border-[#292524] bg-[#292524] text-[#fafaf9] rounded-lg hover:bg-[#292524]/80 transition-colors font-inter flex items-center"
           >
             <Icon id="ChevronLeft" size={16} class="mr-2" />
