@@ -1,6 +1,6 @@
 {
   "name": "My New Page",
-  "path": "/:id",
+  "path": "/page",
   "sections": [
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
