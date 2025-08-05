@@ -1,14 +1,7 @@
 {
-  "name": "My New Page",
+  "name": "Builder",
   "path": "/example-path",
-  "sections": [
-    {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "site/sections/AuthLogin.tsx"
-      }
-    }
-  ],
+  "sections": [],
   "seo": {
     "__resolveType": "website/sections/Seo/SeoV2.tsx"
   },
