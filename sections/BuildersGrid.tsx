@@ -174,48 +174,6 @@ export default function BuildersGrid({
                 </select>
               </div>
             </div>
-            </div>
-          )}
-
-          {/* Main Content */}
-          <div class="flex-1">
-            {/* Results Header */}
-            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-8 gap-4">
-              <div>
-                <p class="text-[#a49d9a] font-inter">
-                  Showing <span class="font-medium text-[#fafaf9]">{builders.length}</span> builders
-                </p>
-              </div>
-              
-              <div class="flex items-center space-x-4">
-                {/* Layout Toggle */}
-                <div class="flex items-center space-x-2 bg-[#292524] rounded-lg p-1">
-                  <button class={`p-2 rounded-lg transition-colors ${layout === "card" ? "bg-[#d0ec19] text-[#1d1917]" : "text-[#a49d9a] hover:text-[#fafaf9]"}`}>
-                    <Icon id="FilterList" size={16} />
-                  </button>
-                  <button class={`p-2 rounded-lg transition-colors ${layout === "list" ? "bg-[#d0ec19] text-[#1d1917]" : "text-[#a49d9a] hover:text-[#fafaf9]"}`}>
-                    <Icon id="Bars3" size={16} />
-                  </button>
-                </div>
-
-                {/* Filters Button */}
-                {showFilters && (
-                  <button class="px-4 py-2 border border-[#292524] bg-[#292524] text-[#fafaf9] rounded-lg hover:bg-[#292524]/80 transition-colors font-inter">
-                    <Icon id="FilterList" size={16} class="mr-2" />
-                    Filters
-                  </button>
-                )}
-
-                {/* Sort */}
-                <select class="border border-[#292524] bg-[#292524] text-[#fafaf9] rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-[#d0ec19] focus:border-[#d0ec19] outline-none font-inter">
-                  <option>Sort by: Relevance</option>
-                  <option>Sort by: Rating</option>
-                  <option>Sort by: Price (Low to High)</option>
-                  <option>Sort by: Price (High to Low)</option>
-                  <option>Sort by: Projects</option>
-                </select>
-              </div>
-            </div>
 
             {/* Builders Grid/List */}
             <div class={`${
