@@ -155,7 +155,7 @@ export default function BuilderCard({
               {isL1Certified && (
                 <div class="absolute -top-1 -right-1 w-6 h-6">
                   <Image
-                    src="/badge-l1.png"
+                    src="https://assets.decocache.com/bounties/c61bbf50-e820-4910-be4a-0e39c96b7ce9/badge-l1.png"
                     alt="L1 Certified"
                     width={24}
                     height={24}
@@ -188,7 +188,7 @@ export default function BuilderCard({
                 {isL1Certified && (
                   <div class="flex items-center">
                     <Image
-                      src="/badge-l1.png"
+                      src="https://assets.decocache.com/bounties/c61bbf50-e820-4910-be4a-0e39c96b7ce9/badge-l1.png"
                       alt="L1 Certified"
                       width={16}
                       height={16}

@@ -50,8 +50,8 @@ export default function HeroBounties({
   return (
     <div class="relative w-full bg-[#1d1917] min-h-screen">
       {/* Navbar */}
-      <nav class="relative z-20 flex items-center justify-between px-6 py-3 lg:px-8">
-        <div class="bg-[#292524] rounded-2xl px-6 py-4 flex items-center justify-between w-full max-w-4xl mx-auto">
+      <nav class="relative z-20 flex items-center justify-between px-6 py-2 lg:px-8">
+        <div class="bg-[#292524] rounded-2xl px-6 py-3 flex items-center justify-between w-full max-w-4xl mx-auto">
           {/* Logo */}
           <div class="flex items-center">
             <Image
@@ -87,8 +87,8 @@ export default function HeroBounties({
       )}
       
       {/* Content */}
-      <div class="relative z-10 container mx-auto px-6 py-12 lg:py-20">
-        <div class="max-w-5xl mx-auto text-center space-y-10">
+      <div class="relative z-10 container mx-auto px-6 py-8 lg:py-12">
+        <div class="max-w-5xl mx-auto text-center space-y-8">
           {/* Join Banner */}
           <div class="inline-flex items-center px-4 py-2 bg-[#292524] rounded-full text-[#fafaf9] text-sm font-inter">
             <span>Join {featuredBuilders}00+ certified AI builders</span>

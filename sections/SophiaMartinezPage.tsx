@@ -112,7 +112,7 @@ export default function SophiaMartinezPage({
                   {builder.isL1Certified && (
                     <div class="flex items-center">
                       <Image
-                        src="/badge-l1.png"
+                        src="https://assets.decocache.com/bounties/c61bbf50-e820-4910-be4a-0e39c96b7ce9/badge-l1.png"
                         alt="L1 Certified"
                         width={32}
                         height={32}
