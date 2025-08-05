@@ -6,11 +6,31 @@
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
         "__resolveType": "site/sections/BuilderPage.tsx",
-        "testProp": "#ffffff",
         "builder": {
           "name": "gabriel",
-          "title": "gabriel"
-        }
+          "id": "123",
+          "title": "gabriel",
+          "bio": "ijsndcjknkd",
+          "fullBio": "aijdkcnkdfnlk",
+          "experienceLevel": "Junior",
+          "isL1Certified": true,
+          "location": "rio",
+          "skills": [
+            "htmx"
+          ],
+          "socialLinks": {
+            "linkedin": "daolkdnlc",
+            "github": "ajkdnc",
+            "website": "ajskdnsclvd",
+            "twitter": "aijdscklnv"
+          },
+          "avatar": "https://assets.decocache.com/bounties/b9179a88-c921-4880-b935-e3fc2e951302/deco-logo-outline.png",
+          "certifications": [
+            "c1"
+          ]
+        },
+        "testProp": "#fffffff",
+        "backButtonUrl": "https://sites-bounties--vdqi85.decocdn.com/gabriel"
       }
     }
   ],
