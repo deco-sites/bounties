@@ -138,7 +138,7 @@ export default function BuilderCard({
   }
 
   return (
-    <a href={`/builders/${builder.id}`} class="block group">
+    <a href={builder.profileUrl || `/builders/${builder.id}`} class="block group">
       <div class="bg-[#292524] rounded-2xl border border-[#292524] hover:border-[#d0ec19]/30 hover:shadow-xl hover:shadow-[#d0ec19]/10 transition-all duration-300 overflow-hidden">
         {/* Header */}
         <div class="p-6 pb-4">

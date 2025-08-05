@@ -11,23 +11,20 @@ import * as $$$$$$2 from "./sections/AuthSignup.tsx";
 import * as $$$$$$3 from "./sections/BlogPost.tsx";
 import * as $$$$$$4 from "./sections/BlogPosts.tsx";
 import * as $$$$$$5 from "./sections/BuilderDetail.tsx";
-import * as $$$$$$6 from "./sections/BuilderPage.tsx";
+import * as $$$$$$6 from "./sections/BuilderProfile.tsx";
 import * as $$$$$$7 from "./sections/BuilderProfilePage.tsx";
 import * as $$$$$$8 from "./sections/BuildersGrid.tsx";
 import * as $$$$$$9 from "./sections/BuildersPage.tsx";
-import * as $$$$$$10 from "./sections/ConnectedBuildersGrid.tsx";
-import * as $$$$$$11 from "./sections/DynamicBuildersGrid.tsx";
-import * as $$$$$$12 from "./sections/Faq.tsx";
-import * as $$$$$$13 from "./sections/FeaturedBuilders.tsx";
-import * as $$$$$$14 from "./sections/Footer.tsx";
-import * as $$$$$$15 from "./sections/Header.tsx";
-import * as $$$$$$16 from "./sections/Hero.tsx";
-import * as $$$$$$17 from "./sections/HeroBounties.tsx";
-import * as $$$$$$18 from "./sections/ImageWithParagraph.tsx";
-import * as $$$$$$19 from "./sections/Logos.tsx";
-import * as $$$$$$20 from "./sections/MainPost.tsx";
-import * as $$$$$$21 from "./sections/Testimonials.tsx";
-import * as $$$$$$22 from "./sections/Theme/Theme.tsx";
+import * as $$$$$$10 from "./sections/Faq.tsx";
+import * as $$$$$$11 from "./sections/Footer.tsx";
+import * as $$$$$$12 from "./sections/Header.tsx";
+import * as $$$$$$13 from "./sections/Hero.tsx";
+import * as $$$$$$14 from "./sections/HeroBounties.tsx";
+import * as $$$$$$15 from "./sections/ImageWithParagraph.tsx";
+import * as $$$$$$16 from "./sections/Logos.tsx";
+import * as $$$$$$17 from "./sections/MainPost.tsx";
+import * as $$$$$$18 from "./sections/Testimonials.tsx";
+import * as $$$$$$19 from "./sections/Theme/Theme.tsx";
 
 const manifest = {
   "sections": {
@@ -37,23 +34,20 @@ const manifest = {
     "site/sections/BlogPost.tsx": $$$$$$3,
     "site/sections/BlogPosts.tsx": $$$$$$4,
     "site/sections/BuilderDetail.tsx": $$$$$$5,
-    "site/sections/BuilderPage.tsx": $$$$$$6,
+    "site/sections/BuilderProfile.tsx": $$$$$$6,
     "site/sections/BuilderProfilePage.tsx": $$$$$$7,
     "site/sections/BuildersGrid.tsx": $$$$$$8,
     "site/sections/BuildersPage.tsx": $$$$$$9,
-    "site/sections/ConnectedBuildersGrid.tsx": $$$$$$10,
-    "site/sections/DynamicBuildersGrid.tsx": $$$$$$11,
-    "site/sections/Faq.tsx": $$$$$$12,
-    "site/sections/FeaturedBuilders.tsx": $$$$$$13,
-    "site/sections/Footer.tsx": $$$$$$14,
-    "site/sections/Header.tsx": $$$$$$15,
-    "site/sections/Hero.tsx": $$$$$$16,
-    "site/sections/HeroBounties.tsx": $$$$$$17,
-    "site/sections/ImageWithParagraph.tsx": $$$$$$18,
-    "site/sections/Logos.tsx": $$$$$$19,
-    "site/sections/MainPost.tsx": $$$$$$20,
-    "site/sections/Testimonials.tsx": $$$$$$21,
-    "site/sections/Theme/Theme.tsx": $$$$$$22,
+    "site/sections/Faq.tsx": $$$$$$10,
+    "site/sections/Footer.tsx": $$$$$$11,
+    "site/sections/Header.tsx": $$$$$$12,
+    "site/sections/Hero.tsx": $$$$$$13,
+    "site/sections/HeroBounties.tsx": $$$$$$14,
+    "site/sections/ImageWithParagraph.tsx": $$$$$$15,
+    "site/sections/Logos.tsx": $$$$$$16,
+    "site/sections/MainPost.tsx": $$$$$$17,
+    "site/sections/Testimonials.tsx": $$$$$$18,
+    "site/sections/Theme/Theme.tsx": $$$$$$19,
   },
   "apps": {
     "site/apps/deco/blog.ts": $$$$$$$$$$$0,

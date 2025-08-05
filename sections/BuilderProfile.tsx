@@ -54,19 +54,24 @@ export interface Builder {
 
 export interface Props {
   /**
-   * @title Builder ID
-   * @description The unique identifier for this builder
-   */
-  builderId?: string;
-  /**
    * @title Builder Data
-   * @description Static builder data (for demo purposes)
+   * @description Complete builder information
    */
   builder?: Builder;
+  /**
+   * @title Show Back Button
+   * @default true
+   */
+  showBackButton?: boolean;
+  /**
+   * @title Back Button URL
+   * @default "/builders"
+   */
+  backButtonUrl?: string;
 }
 
-// Mock data for demo
-const MOCK_BUILDER: Builder = {
+// Default builder data
+const DEFAULT_BUILDER: Builder = {
   id: "sarah-chen",
   name: "Sarah Chen",
   title: "Machine Learning Engineer",
@@ -146,44 +151,43 @@ const MOCK_BUILDER: Builder = {
   }
 };
 
-export default function BuilderPage({
-  builderId,
-  builder = MOCK_BUILDER
+export default function BuilderProfile({
+  builder = DEFAULT_BUILDER,
+  showBackButton = true,
+  backButtonUrl = "/builders"
 }: Props) {
-  
-  // In a real implementation, you would fetch the builder data based on builderId
-  // For now, we'll use the static data
-  const builderData = builder;
   
   return (
     <div class="w-full bg-[#1d1917]">
       {/* Navbar */}
-      <nav class="relative z-20 flex items-center justify-between px-6 py-4 lg:px-8">
-        {/* Logo */}
-        <div class="flex items-center">
-          <a href="/" class="flex items-center">
-            <Image
-              src="/deco-logo-outline.png"
-              alt="deco.cx"
-              width={120}
-              height={40}
-              class="h-8 w-auto"
-            />
+      {showBackButton && (
+        <nav class="relative z-20 flex items-center justify-between px-6 py-4 lg:px-8">
+          {/* Logo */}
+          <div class="flex items-center">
+            <a href="/" class="flex items-center">
+              <Image
+                src="/deco-logo-outline.png"
+                alt="deco.cx"
+                width={120}
+                height={40}
+                class="h-8 w-auto"
+              />
+            </a>
+          </div>
+          
+          {/* Back Button */}
+          <a
+            href={backButtonUrl}
+            class="px-4 py-2 border border-[#292524] bg-[#292524] text-[#fafaf9] rounded-lg hover:bg-[#292524]/80 transition-colors font-inter flex items-center"
+          >
+            <Icon id="ChevronLeft" size={16} class="mr-2" />
+            Back to Builders
           </a>
-        </div>
-        
-        {/* Back Button */}
-        <a
-          href="/builders"
-          class="px-4 py-2 border border-[#292524] bg-[#292524] text-[#fafaf9] rounded-lg hover:bg-[#292524]/80 transition-colors font-inter flex items-center"
-        >
-          <Icon id="ChevronLeft" size={16} class="mr-2" />
-          Back to Builders
-        </a>
-      </nav>
+        </nav>
+      )}
 
       {/* Builder Detail */}
-      <BuilderDetail builder={builderData} />
+      <BuilderDetail builder={builder} />
     </div>
   );
 } 

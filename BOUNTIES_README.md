@@ -14,23 +14,21 @@ Sistema completo para diretório de AI Builders inspirado no **agent.ai/builders
 
 ### 2. **Diretório de Builders**
 - **BuildersGrid**: Listagem com filtros avançados
-- **ConnectedBuildersGrid**: Grid conectado a páginas existentes ⭐ NOVO
-- **FeaturedBuilders**: Seção de builders em destaque ⭐ NOVO
 - Layout em cards ou lista
 - Filtros por certificação L1, especialidade, experiência, localização
 - Paginação integrada
 - Sistema de ordenação
-- **Navegação**: Cards clicáveis para páginas individuais `/builders/{id}`
+- **Navegação**: Cards clicáveis para páginas individuais (URL personalizada)
 
 ### 3. **Perfis Detalhados**
 - **BuilderDetail**: Página completa do profissional
-- **BuilderPage**: Página individual com navbar ⭐ NOVO
+- **BuilderProfile**: Página individual com navbar ⭐ NOVO
 - Informações pessoais e profissionais
 - Portfólio de projetos em destaque
 - Histórico de experiência
 - Certificações e educação
 - Links sociais e contato
-- **URLs Dinâmicas**: `/builders/{id}` para cada builder
+- **URLs Personalizadas**: Cada builder pode ter sua própria URL
 
 ### 4. **Sistema de Autenticação**
 - **AuthLogin**: Página de login responsiva
@@ -44,15 +42,13 @@ Sistema completo para diretório de AI Builders inspirado no **agent.ai/builders
 sections/
 ├── HeroBounties.tsx           # Banner principal com busca
 ├── BuildersGrid.tsx           # Listagem e filtros de builders  
-├── ConnectedBuildersGrid.tsx  # Grid conectado a páginas existentes ⭐ NOVO
-├── FeaturedBuilders.tsx       # Builders em destaque ⭐ NOVO
 ├── BuilderDetail.tsx          # Página de perfil completo
-├── BuilderPage.tsx            # Página individual de builder ⭐ NOVO
+├── BuilderProfile.tsx         # Página individual de builder ⭐ NOVO
 ├── AuthLogin.tsx              # Página de login
 └── AuthSignup.tsx             # Página de cadastro
 
 components/ui/
-└── BuilderCard.tsx            # Componente card do builder (navegação para /builders/{id})
+└── BuilderCard.tsx            # Componente card do builder (navegação personalizada)
 ```
 
 ## 🔧 Como Usar no Admin Deco
@@ -63,76 +59,60 @@ Adicione as seções nesta ordem:
 2. `BuildersGrid` - Diretório de builders (opcional na home)
 
 ### 2. **Página de Listagem de Builders**
-Use uma das opções:
-- `BuildersGrid` com `showFilters: true` (dados estáticos)
-- `ConnectedBuildersGrid` com `builderPages` (conectado a páginas) ⭐ NOVO
-- `FeaturedBuilders` para seção de destaque ⭐ NOVO
+Use:
+- `BuildersGrid` com `showFilters: true`
+- Configure `profileUrl` em cada builder para URLs personalizadas
 
 ### 3. **Página de Perfil Individual**
-Use uma das opções:
-- `BuilderDetail` passando dados do builder específico
-- `BuilderPage` com navbar e navegação completa ⭐ NOVO
+Use:
+- `BuilderProfile` com dados completos do builder
+- Inclui navbar com botão "Back to Builders"
 
 ### 4. **Páginas de Autenticação**
 - `/login` → `AuthLogin`
 - `/signup` → `AuthSignup`
 
-## 🔗 **Conectando Builders a Páginas**
+## 🔗 **Sistema de Navegação Simples**
 
-### **ConnectedBuildersGrid**
-Esta seção permite conectar builders diretamente a páginas existentes no Deco CMS:
+### **Como Funciona**
+1. **Cards Clicáveis**: Cada `BuilderCard` é clicável
+2. **URL Personalizada**: Use `profileUrl` para definir a URL de cada builder
+3. **Fallback**: Se não houver `profileUrl`, usa `/builders/{id}`
 
+### **Exemplo de Configuração**
 ```typescript
+// No BuildersGrid, configure cada builder:
 {
-  builderPages: [
-    {
-      id: "sarah-chen",
-      name: "Sarah Chen",
-      title: "Machine Learning Engineer",
-      avatar: ImageWidget,  // Widget de imagem do Deco
-      bio: "Specialized in computer vision...",
-      experienceLevel: "Senior",
-      isL1Certified: true,
-      specialties: ["Computer Vision", "Deep Learning"],
-      location: "San Francisco, CA"
-    }
-  ],
-  showFilters: true,
-  showPagination: true,
-  title: "Our AI Builders",
-  subtitle: "Connected to existing pages"
+  id: "sarah-chen",
+  name: "Sarah Chen",
+  title: "Machine Learning Engineer",
+  // ... outros dados
+  profileUrl: "/builder/sarah-chen"  // URL personalizada
+}
+
+// Ou use URLs padrão:
+{
+  id: "marcus-johnson",
+  name: "Marcus Johnson",
+  // ... outros dados
+  // profileUrl não definido = usa /builders/marcus-johnson
 }
 ```
 
-### **FeaturedBuilders**
-Seção para destacar builders específicos:
-
+### **Página Individual**
+Use `BuilderProfile` para criar páginas individuais:
 ```typescript
 {
-  featuredBuilders: [
-    {
-      id: "marcus-johnson",
-      name: "Marcus Johnson",
-      title: "NLP Specialist",
-      avatar: ImageWidget,
-      bio: "Expert in natural language processing...",
-      experienceLevel: "Expert",
-      isL1Certified: true,
-      specialties: ["NLP", "Large Language Models"],
-      featuredReason: "Top rated builder"
-    }
-  ],
-  title: "Featured AI Builders",
-  subtitle: "Meet our top certified professionals",
-  showViewAll: true,
-  viewAllUrl: "/builders"
+  builder: {
+    // Dados completos do builder
+    id: "sarah-chen",
+    name: "Sarah Chen",
+    // ... todos os dados
+  },
+  showBackButton: true,
+  backButtonUrl: "/builders"
 }
 ```
-
-### **Indicadores Visuais**
-- **"(Connected to pages)"**: Aparece quando builders estão conectados
-- **Navegação**: Cards clicáveis para `/builders/{id}`
-- **Fallback**: Dados padrão quando não há conexões
 
 ## 🎨 Personalização de Props
 ```typescript
