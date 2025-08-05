@@ -55,10 +55,10 @@ const DAVID_KIM_BUILDER: Builder = {
 export default function DavidKimPage({
   builder = DAVID_KIM_BUILDER,
   showBackButton = true,
-  backButtonUrl = "/builders",
+  backButtonUrl = "/",
   testProp = "David Kim Page",
-  navbarLogo = "/deco-logo-outline.png",
-  navbarButtonText = "Back to Builders",
+  
+  
   navbarButtonUrl = "/"
 }: Props) {
   

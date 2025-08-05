@@ -55,10 +55,10 @@ const MICHAEL_CHEN_BUILDER: Builder = {
 export default function MichaelChenPage({
   builder = MICHAEL_CHEN_BUILDER,
   showBackButton = true,
-  backButtonUrl = "/builders",
+  backButtonUrl = "/",
   testProp = "Michael Chen Page",
-  navbarLogo = "/deco-logo-outline.png",
-  navbarButtonText = "Back to Builders",
+  
+  
   navbarButtonUrl = "/"
 }: Props) {
   

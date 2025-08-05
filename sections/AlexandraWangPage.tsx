@@ -55,10 +55,10 @@ const ALEXANDRA_WANG_BUILDER: Builder = {
 export default function AlexandraWangPage({
   builder = ALEXANDRA_WANG_BUILDER,
   showBackButton = true,
-  backButtonUrl = "/builders",
+  backButtonUrl = "/",
   testProp = "Alexandra Wang Page",
-  navbarLogo = "/deco-logo-outline.png",
-  navbarButtonText = "Back to Builders",
+  
+  
   navbarButtonUrl = "/"
 }: Props) {
   

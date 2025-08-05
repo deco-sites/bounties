@@ -55,10 +55,10 @@ const JAMES_WILSON_BUILDER: Builder = {
 export default function JamesWilsonPage({
   builder = JAMES_WILSON_BUILDER,
   showBackButton = true,
-  backButtonUrl = "/builders",
+  backButtonUrl = "/",
   testProp = "James Wilson Page",
-  navbarLogo = "/deco-logo-outline.png",
-  navbarButtonText = "Back to Builders",
+  
+  
   navbarButtonUrl = "/"
 }: Props) {
   

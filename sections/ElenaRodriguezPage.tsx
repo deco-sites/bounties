@@ -55,11 +55,8 @@ const ELENA_RODRIGUEZ_BUILDER: Builder = {
 export default function ElenaRodriguezPage({
   builder = ELENA_RODRIGUEZ_BUILDER,
   showBackButton = true,
-  backButtonUrl = "/builders",
-  testProp = "Elena Rodriguez Page",
-  navbarLogo = "/deco-logo-outline.png",
-  navbarButtonText = "Back to Builders",
-  navbarButtonUrl = "/"
+  backButtonUrl = "/",
+  testProp = "Elena Rodriguez Page"
 }: Props) {
   
   return (

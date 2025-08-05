@@ -117,7 +117,7 @@ const DEFAULT_BUILDER: Builder = {
 export default function BuilderPage({
   builder = DEFAULT_BUILDER,
   showBackButton = true,
-  backButtonUrl = "/builders",
+  backButtonUrl = "/",
   testProp = "Default Test Value"
 }: Props) {
   

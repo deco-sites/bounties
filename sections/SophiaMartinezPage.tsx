@@ -55,10 +55,10 @@ const SOPHIA_MARTINEZ_BUILDER: Builder = {
 export default function SophiaMartinezPage({
   builder = SOPHIA_MARTINEZ_BUILDER,
   showBackButton = true,
-  backButtonUrl = "/builders",
+  backButtonUrl = "/",
   testProp = "Sophia Martinez Page",
-  navbarLogo = "/deco-logo-outline.png",
-  navbarButtonText = "Back to Builders",
+  
+  
   navbarButtonUrl = "/"
 }: Props) {
   

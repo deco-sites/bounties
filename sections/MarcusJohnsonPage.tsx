@@ -55,160 +55,169 @@ const MARCUS_JOHNSON_BUILDER: Builder = {
 export default function MarcusJohnsonPage({
   builder = MARCUS_JOHNSON_BUILDER,
   showBackButton = true,
-  backButtonUrl = "/builders",
-  testProp = "Marcus Johnson Page",
-  navbarLogo = "/deco-logo-outline.png",
-  navbarButtonText = "Back to Builders",
-  navbarButtonUrl = "/"
+  backButtonUrl = "/",
+  testProp = "Marcus Johnson Page"
 }: Props) {
   
   return (
     <div class="w-full bg-[#1d1917] min-h-screen">
-      {/* Navbar */}
+      {/* Back Button */}
       {showBackButton && (
-        <nav class="relative z-20 flex items-center justify-between px-6 py-4 lg:px-8">
-          <div class="flex items-center">
-            <a href="/" class="flex items-center">
-              <Image
-                src={navbarLogo}
-                alt="deco.cx"
-                width={120}
-                height={40}
-                class="h-8 w-auto"
-              />
-            </a>
-          </div>
-          
+        <div class="px-6 py-4 lg:px-8">
           <a
-            href={navbarButtonUrl}
-            class="px-4 py-2 border border-[#292524] bg-[#292524] text-[#fafaf9] rounded-lg hover:bg-[#292524]/80 transition-colors font-inter flex items-center"
+            href={backButtonUrl}
+            class="inline-flex items-center text-[#a49d9a] hover:text-[#fafaf9] transition-colors font-inter"
           >
-            <Icon id="ChevronLeft" size={16} class="mr-2" />
-            {navbarButtonText}
+            <Icon id="ArrowBack" size={20} class="mr-2" />
+            Back to Builders
           </a>
-        </nav>
+        </div>
       )}
 
       {/* Builder Profile */}
       <div class="container mx-auto px-4 py-8">
-        <div class="max-w-4xl mx-auto">
-          <div class="bg-[#292524] rounded-2xl p-8 mb-8">
-            <div class="flex flex-col lg:flex-row gap-8">
-              <div class="flex-shrink-0">
-                <Image
-                  src={builder.avatar}
-                  alt={builder.name}
-                  width={200}
-                  height={200}
-                  class="w-32 h-32 lg:w-40 lg:h-40 rounded-full object-cover"
-                />
-              </div>
-              
-              <div class="flex-1">
-                <div class="flex items-center gap-3 mb-4">
-                  <h1 class="text-3xl lg:text-4xl font-bold text-[#fafaf9] font-inter">
-                    {builder.name}
-                  </h1>
-                  {builder.isL1Certified && (
-                    <div class="flex items-center">
-                      <Image
-                        src="https://assets.decocache.com/bounties/c61bbf50-e820-4910-be4a-0e39c96b7ce9/badge-l1.png"
-                        alt="L1 Certified"
-                        width={32}
-                        height={32}
-                        class="w-8 h-8"
-                      />
-                      <span class="ml-2 px-3 py-1 bg-[#d0ec19] text-[#1d1917] rounded-full text-sm font-semibold font-inter">
-                        L1 Certified
-                      </span>
-                    </div>
-                  )}
-                </div>
-                
-                <h2 class="text-xl text-[#d0ec19] font-inter mb-4">
-                  {builder.title}
-                </h2>
-                
-                <p class="text-[#a49d9a] font-inter mb-4">
-                  {builder.bio}
-                </p>
-                
-                {builder.location && (
-                  <div class="flex items-center text-[#a49d9a] font-inter">
-                    <Icon id="MapPin" size={16} class="mr-2" />
-                    {builder.location}
+        <div class="max-w-6xl mx-auto">
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            {/* Main Content */}
+            <div class="lg:col-span-2">
+              {/* Profile Header */}
+              <div class="bg-[#292524] rounded-2xl p-8 mb-8">
+                <div class="flex flex-col lg:flex-row gap-8">
+                  <div class="flex-shrink-0">
+                    <Image
+                      src={builder.avatar}
+                      alt={builder.name}
+                      width={200}
+                      height={200}
+                      class="w-32 h-32 lg:w-40 lg:h-40 rounded-full object-cover"
+                    />
                   </div>
-                )}
+                  
+                  <div class="flex-1">
+                    <div class="flex items-center gap-3 mb-4">
+                      <h1 class="text-3xl lg:text-4xl font-bold text-[#fafaf9] font-inter">
+                        {builder.name}
+                      </h1>
+                      {builder.isL1Certified && (
+                        <div class="flex items-center">
+                          <Image
+                            src="https://assets.decocache.com/bounties/c61bbf50-e820-4910-be4a-0e39c96b7ce9/badge-l1.png"
+                            alt="L1 Certified"
+                            width={32}
+                            height={32}
+                            class="w-8 h-8"
+                          />
+                          <span class="ml-2 px-3 py-1 bg-[#d0ec19] text-[#1d1917] rounded-full text-sm font-semibold font-inter">
+                            L1 Certified
+                          </span>
+                        </div>
+                      )}
+                    </div>
+                    
+                    <h2 class="text-xl text-[#d0ec19] font-inter mb-4">
+                      {builder.title}
+                    </h2>
+                    
+                    <p class="text-[#a49d9a] font-inter mb-4">
+                      {builder.bio}
+                    </p>
+                    
+                    {builder.location && (
+                      <div class="flex items-center text-[#a49d9a] font-inter mb-4">
+                        <Icon id="LocationOn" size={20} class="mr-2 text-[#d0ec19]" />
+                        {builder.location}
+                      </div>
+                    )}
+
+                    {/* Social Links */}
+                    {builder.socialLinks && (
+                      <div class="flex gap-3">
+                        {builder.socialLinks.linkedin && (
+                          <a
+                            href={builder.socialLinks.linkedin}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="p-3 bg-[#1d1917] text-[#fafaf9] rounded-xl hover:bg-[#292524] transition-colors"
+                            title="LinkedIn"
+                          >
+                            <Icon id="Linkedin" size={20} />
+                          </a>
+                        )}
+                        {builder.socialLinks.github && (
+                          <a
+                            href={builder.socialLinks.github}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="p-3 bg-[#1d1917] text-[#fafaf9] rounded-xl hover:bg-[#292524] transition-colors"
+                            title="GitHub"
+                          >
+                            <Icon id="GitHub" size={20} />
+                          </a>
+                        )}
+                        {builder.socialLinks.website && (
+                          <a
+                            href={builder.socialLinks.website}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="p-3 bg-[#1d1917] text-[#fafaf9] rounded-xl hover:bg-[#292524] transition-colors"
+                            title="Website"
+                          >
+                            <Icon id="Language" size={20} />
+                          </a>
+                        )}
+                        {builder.socialLinks.twitter && (
+                          <a
+                            href={builder.socialLinks.twitter}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="p-3 bg-[#1d1917] text-[#fafaf9] rounded-xl hover:bg-[#292524] transition-colors"
+                            title="Twitter"
+                          >
+                            <Icon id="Twitter" size={20} />
+                          </a>
+                        )}
+                      </div>
+                    )}
+                  </div>
+                </div>
+              </div>
+
+              {/* About Section */}
+              <div class="bg-[#292524] rounded-2xl p-8 mb-8">
+                <h3 class="text-2xl font-bold text-[#fafaf9] mb-4 font-inter">About</h3>
+                <p class="text-[#a49d9a] font-inter leading-relaxed">
+                  {builder.fullBio}
+                </p>
+              </div>
+            </div>
+
+            {/* Sidebar */}
+            <div class="lg:col-span-1">
+              {/* Skills */}
+              <div class="bg-[#292524] rounded-2xl p-6 mb-6">
+                <h3 class="text-xl font-bold text-[#fafaf9] mb-4 font-inter">Skills</h3>
+                <div class="flex flex-wrap gap-2">
+                  {builder.skills.map((skill) => (
+                    <span class="px-3 py-1 bg-[#1d1917] text-[#fafaf9] rounded-full text-sm font-inter">
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              {/* Certifications */}
+              <div class="bg-[#292524] rounded-2xl p-6">
+                <h3 class="text-xl font-bold text-[#fafaf9] mb-4 font-inter">Certifications</h3>
+                <div class="flex flex-wrap gap-2">
+                  {builder.certifications.map((cert) => (
+                    <span class="px-3 py-1 bg-[#1d1917] text-[#fafaf9] rounded-full text-sm font-inter">
+                      {cert}
+                    </span>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
-
-          <div class="bg-[#292524] rounded-2xl p-8 mb-8">
-            <h3 class="text-2xl font-bold text-[#fafaf9] mb-4 font-inter">About</h3>
-            <p class="text-[#a49d9a] font-inter leading-relaxed">
-              {builder.fullBio}
-            </p>
-          </div>
-
-          <div class="bg-[#292524] rounded-2xl p-8 mb-8">
-            <h3 class="text-2xl font-bold text-[#fafaf9] mb-4 font-inter">Skills</h3>
-            <div class="flex flex-wrap gap-2">
-              {builder.skills.map((skill) => (
-                <span class="px-3 py-1 bg-[#1d1917] text-[#fafaf9] rounded-full text-sm font-inter">
-                  {skill}
-                </span>
-              ))}
-            </div>
-          </div>
-
-          <div class="bg-[#292524] rounded-2xl p-8 mb-8">
-            <h3 class="text-2xl font-bold text-[#fafaf9] mb-4 font-inter">Certifications</h3>
-            <div class="flex flex-wrap gap-2">
-              {builder.certifications.map((cert) => (
-                <span class="px-3 py-1 bg-[#1d1917] text-[#fafaf9] rounded-full text-sm font-inter">
-                  {cert}
-                </span>
-              ))}
-            </div>
-          </div>
-
-          {builder.socialLinks && (
-            <div class="bg-[#292524] rounded-2xl p-8">
-              <h3 class="text-2xl font-bold text-[#fafaf9] mb-4 font-inter">Connect</h3>
-              <div class="flex gap-4">
-                {builder.socialLinks.linkedin && (
-                  <a
-                    href={builder.socialLinks.linkedin}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="px-4 py-2 bg-[#d0ec19] text-[#1d1917] rounded-lg font-semibold font-inter hover:bg-[#d0ec19]/90 transition-colors"
-                  >
-                    LinkedIn
-                  </a>
-                )}
-                {builder.socialLinks.github && (
-                  <a
-                    href={builder.socialLinks.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="px-4 py-2 border border-[#292524] text-[#fafaf9] rounded-lg font-inter hover:bg-[#292524] transition-colors"
-                  >
-                    GitHub
-                  </a>
-                )}
-                {builder.socialLinks.website && (
-                  <a
-                    href={builder.socialLinks.website}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="px-4 py-2 border border-[#292524] text-[#fafaf9] rounded-lg font-inter hover:bg-[#292524] transition-colors"
-                  >
-                    Website
-                  </a>
-                )}
-              </div>
-            </div>
-          )}
         </div>
       </div>
     </div>
