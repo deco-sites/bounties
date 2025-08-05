@@ -51,14 +51,14 @@ export default function HeroBounties({
     <div class="relative w-full bg-[#1d1917] min-h-screen">
       {/* Navbar */}
       <nav class="relative z-20 flex items-center justify-between px-6 py-4 lg:px-8">
-        <div class="bg-[#292524] rounded-full px-6 py-3 flex items-center justify-between w-full max-w-4xl mx-auto">
+        <div class="bg-[#292524] rounded-2xl px-6 py-6 flex items-center justify-between w-full max-w-4xl mx-auto">
           {/* Logo */}
           <div class="flex items-center">
             <Image
               src={navbarLogo}
               alt="deco.cx"
               width={120}
-              height={40}
+              height={48}
               class="h-8 w-auto"
             />
           </div>
@@ -66,7 +66,7 @@ export default function HeroBounties({
           {/* CTA Button */}
           <a
             href={navbarButtonUrl}
-            class="px-6 py-2 bg-[#d0ec19] text-[#1d1917] rounded-full font-semibold hover:bg-[#d0ec19]/90 transition-all duration-200 font-inter"
+            class="px-6 py-3 bg-[#d0ec19] text-[#1d1917] rounded-xl font-semibold hover:bg-[#d0ec19]/90 transition-all duration-200 font-inter"
           >
             {navbarButtonText}
           </a>
@@ -116,7 +116,7 @@ export default function HeroBounties({
                 type="text"
                 placeholder={searchPlaceholder}
                 id="search-input"
-                class="w-full pl-16 pr-6 py-6 text-lg bg-[#292524] border border-[#292524] rounded-2xl focus:ring-2 focus:ring-[#d0ec19] focus:border-[#d0ec19] outline-none transition-all duration-300 text-[#fafaf9] placeholder-[#a49d9a] font-inter"
+                class="w-full pl-16 pr-6 py-6 text-lg bg-[#292524] border border-[#292524] rounded-xl focus:ring-2 focus:ring-[#d0ec19] focus:border-[#d0ec19] outline-none transition-all duration-300 text-[#fafaf9] placeholder-[#a49d9a] font-inter"
               />
               <button 
                 id="search-button"
