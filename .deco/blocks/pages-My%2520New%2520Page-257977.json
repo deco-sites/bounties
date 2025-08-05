@@ -4,7 +4,8 @@
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
-        "__resolveType": "site/sections/HeroBounties.tsx"
+        "__resolveType": "site/sections/HeroBounties.tsx",
+        "navbarLogo": "https://assets.decocache.com/bounties/b9179a88-c921-4880-b935-e3fc2e951302/deco-logo-outline.png"
       }
     },
     {

@@ -3101,6 +3101,9 @@ input.tab:checked + .tab-content,
 .animate-sliding {
   animation: sliding 30s linear infinite;
 }
+.cursor-not-allowed {
+  cursor: not-allowed;
+}
 .cursor-pointer {
   cursor: pointer;
 }
@@ -3419,6 +3422,10 @@ input.tab:checked + .tab-content,
 .bg-\[\#C9CFCF\] {
   --tw-bg-opacity: 1;
   background-color: rgb(201 207 207 / var(--tw-bg-opacity));
+}
+.bg-\[\#a49d9a\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(164 157 154 / var(--tw-bg-opacity));
 }
 .bg-\[\#d0ec19\] {
   --tw-bg-opacity: 1;
@@ -3924,6 +3931,9 @@ input.tab:checked + .tab-content,
 }
 .opacity-5 {
   opacity: 0.05;
+}
+.opacity-50 {
+  opacity: 0.5;
 }
 .shadow-2xl {
   --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
