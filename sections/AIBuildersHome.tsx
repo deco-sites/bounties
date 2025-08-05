@@ -1,4 +1,3 @@
-import { type Section } from "@deco/deco/types.ts";
 import HeroBounties from "./HeroBounties.tsx";
 import BuildersGrid from "./BuildersGrid.tsx";
 

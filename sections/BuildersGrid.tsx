@@ -142,62 +142,62 @@ export default function BuildersGrid({
 }: Props) {
   
   return (
-    <div class="w-full bg-gray-50 py-16 lg:py-24">
+    <div class="w-full bg-[#1d1917] py-16 lg:py-24">
       <div class="container mx-auto px-4">
         {/* Header */}
         <div class="text-center mb-12">
-          <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">{title}</h2>
-          <p class="text-lg text-gray-600 max-w-2xl mx-auto">{subtitle}</p>
+          <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-[#fafaf9] font-inter">{title}</h2>
+          <p class="text-lg text-[#a49d9a] max-w-2xl mx-auto font-inter">{subtitle}</p>
         </div>
 
         <div class="flex flex-col lg:flex-row gap-8">
           {/* Filters Sidebar */}
           {showFilters && (
             <div class="lg:w-80 flex-shrink-0">
-              <div class="bg-white rounded-2xl p-6 border border-gray-100 sticky top-6">
+              <div class="bg-[#292524] rounded-2xl p-6 border border-[#292524] sticky top-6">
                 <div class="flex items-center justify-between mb-6">
-                  <h3 class="text-lg font-semibold">Filters</h3>
-                  <button class="text-blue-600 text-sm hover:underline">
+                  <h3 class="text-lg font-semibold text-[#fafaf9] font-inter">Filters</h3>
+                  <button class="text-[#d0ec19] text-sm hover:text-[#d0ec19]/80 font-inter">
                     Clear all
                   </button>
                 </div>
 
                 {/* Search */}
                 <div class="mb-6">
-                  <label class="block text-sm font-medium text-gray-700 mb-2">
+                  <label class="block text-sm font-medium text-[#fafaf9] mb-2 font-inter">
                     Search
                   </label>
                   <div class="relative">
-                    <Icon id="MagnifyingGlass" size={16} class="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
+                    <Icon id="MagnifyingGlass" size={16} class="absolute left-3 top-1/2 transform -translate-y-1/2 text-[#a49d9a]" />
                     <input
                       type="text"
                       placeholder="Search builders..."
-                      class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
+                      class="w-full pl-10 pr-4 py-2 border border-[#1d1917] bg-[#1d1917] text-[#fafaf9] placeholder-[#a49d9a] rounded-lg focus:ring-2 focus:ring-[#d0ec19] focus:border-[#d0ec19] outline-none font-inter"
                     />
                   </div>
                 </div>
 
                 {/* Certification Filter */}
                 <div class="mb-6">
-                  <label class="block text-sm font-medium text-gray-700 mb-3">
+                  <label class="block text-sm font-medium text-[#fafaf9] mb-3 font-inter">
                     Certification
                   </label>
                   <label class="flex items-center space-x-2">
-                    <input type="checkbox" class="rounded border-gray-300 text-blue-600 focus:ring-blue-500" />
-                    <span class="text-sm">Agentic Engineer L1 Only</span>
+                    <input type="checkbox" class="rounded border-[#a49d9a] text-[#d0ec19] focus:ring-[#d0ec19] bg-[#1d1917]" />
+                    <span class="text-sm text-[#a49d9a] font-inter">Agentic Engineer L1 Only</span>
                   </label>
                 </div>
 
                 {/* Specialties Filter */}
                 <div class="mb-6">
-                  <label class="block text-sm font-medium text-gray-700 mb-3">
+                  <label class="block text-sm font-medium text-[#fafaf9] mb-3 font-inter">
                     Specialties
                   </label>
                   <div class="space-y-2 max-h-40 overflow-y-auto">
                     {filterOptions.specialties.map((specialty) => (
                       <label key={specialty} class="flex items-center space-x-2">
-                        <input type="checkbox" class="rounded border-gray-300 text-blue-600 focus:ring-blue-500" />
-                        <span class="text-sm">{specialty}</span>
+                        <input type="checkbox" class="rounded border-[#a49d9a] text-[#d0ec19] focus:ring-[#d0ec19] bg-[#1d1917]" />
+                        <span class="text-sm text-[#a49d9a] font-inter">{specialty}</span>
                       </label>
                     ))}
                   </div>
@@ -205,14 +205,14 @@ export default function BuildersGrid({
 
                 {/* Experience Level */}
                 <div class="mb-6">
-                  <label class="block text-sm font-medium text-gray-700 mb-3">
+                  <label class="block text-sm font-medium text-[#fafaf9] mb-3 font-inter">
                     Experience Level
                   </label>
                   <div class="space-y-2">
                     {filterOptions.experienceLevels.map((level) => (
                       <label key={level} class="flex items-center space-x-2">
-                        <input type="checkbox" class="rounded border-gray-300 text-blue-600 focus:ring-blue-500" />
-                        <span class="text-sm">{level}</span>
+                        <input type="checkbox" class="rounded border-[#a49d9a] text-[#d0ec19] focus:ring-[#d0ec19] bg-[#1d1917]" />
+                        <span class="text-sm text-[#a49d9a] font-inter">{level}</span>
                       </label>
                     ))}
                   </div>
@@ -220,14 +220,14 @@ export default function BuildersGrid({
 
                 {/* Price Range */}
                 <div class="mb-6">
-                  <label class="block text-sm font-medium text-gray-700 mb-3">
+                  <label class="block text-sm font-medium text-[#fafaf9] mb-3 font-inter">
                     Hourly Rate
                   </label>
                   <div class="space-y-2">
                     {filterOptions.priceRanges.map((range) => (
                       <label key={range.label} class="flex items-center space-x-2">
-                        <input type="checkbox" class="rounded border-gray-300 text-blue-600 focus:ring-blue-500" />
-                        <span class="text-sm">{range.label}</span>
+                        <input type="checkbox" class="rounded border-[#a49d9a] text-[#d0ec19] focus:ring-[#d0ec19] bg-[#1d1917]" />
+                        <span class="text-sm text-[#a49d9a] font-inter">{range.label}</span>
                       </label>
                     ))}
                   </div>
@@ -235,14 +235,14 @@ export default function BuildersGrid({
 
                 {/* Location */}
                 <div class="mb-6">
-                  <label class="block text-sm font-medium text-gray-700 mb-3">
+                  <label class="block text-sm font-medium text-[#fafaf9] mb-3 font-inter">
                     Location
                   </label>
                   <div class="space-y-2 max-h-32 overflow-y-auto">
                     {filterOptions.locations.map((location) => (
                       <label key={location} class="flex items-center space-x-2">
-                        <input type="checkbox" class="rounded border-gray-300 text-blue-600 focus:ring-blue-500" />
-                        <span class="text-sm">{location}</span>
+                        <input type="checkbox" class="rounded border-[#a49d9a] text-[#d0ec19] focus:ring-[#d0ec19] bg-[#1d1917]" />
+                        <span class="text-sm text-[#a49d9a] font-inter">{location}</span>
                       </label>
                     ))}
                   </div>
@@ -256,24 +256,24 @@ export default function BuildersGrid({
             {/* Results Header */}
             <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-8 gap-4">
               <div>
-                <p class="text-gray-600">
-                  Showing <span class="font-medium">{builders.length}</span> builders
+                <p class="text-[#a49d9a] font-inter">
+                  Showing <span class="font-medium text-[#fafaf9]">{builders.length}</span> builders
                 </p>
               </div>
               
               <div class="flex items-center space-x-4">
                 {/* Layout Toggle */}
-                <div class="flex items-center space-x-2">
-                  <button class={`p-2 rounded-lg ${layout === "card" ? "bg-blue-100 text-blue-600" : "text-gray-400 hover:text-gray-600"}`}>
+                <div class="flex items-center space-x-2 bg-[#292524] rounded-lg p-1">
+                  <button class={`p-2 rounded-lg transition-colors ${layout === "card" ? "bg-[#d0ec19] text-[#1d1917]" : "text-[#a49d9a] hover:text-[#fafaf9]"}`}>
                     <Icon id="FilterList" size={16} />
                   </button>
-                  <button class={`p-2 rounded-lg ${layout === "list" ? "bg-blue-100 text-blue-600" : "text-gray-400 hover:text-gray-600"}`}>
+                  <button class={`p-2 rounded-lg transition-colors ${layout === "list" ? "bg-[#d0ec19] text-[#1d1917]" : "text-[#a49d9a] hover:text-[#fafaf9]"}`}>
                     <Icon id="Bars3" size={16} />
                   </button>
                 </div>
 
                 {/* Sort */}
-                <select class="border border-gray-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none">
+                <select class="border border-[#292524] bg-[#292524] text-[#fafaf9] rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-[#d0ec19] focus:border-[#d0ec19] outline-none font-inter">
                   <option>Sort by: Relevance</option>
                   <option>Sort by: Rating</option>
                   <option>Sort by: Price (Low to High)</option>
@@ -302,15 +302,15 @@ export default function BuildersGrid({
             {showPagination && (
               <div class="mt-12 flex justify-center">
                 <div class="flex items-center space-x-2">
-                  <button class="p-2 rounded-lg border border-gray-300 text-gray-400 hover:text-gray-600">
+                  <button class="p-2 rounded-lg border border-[#292524] bg-[#292524] text-[#a49d9a] hover:text-[#fafaf9] transition-colors">
                     <Icon id="ChevronLeft" size={16} />
                   </button>
-                  <button class="px-4 py-2 rounded-lg bg-blue-600 text-white">1</button>
-                  <button class="px-4 py-2 rounded-lg border border-gray-300 text-gray-600 hover:bg-gray-50">2</button>
-                  <button class="px-4 py-2 rounded-lg border border-gray-300 text-gray-600 hover:bg-gray-50">3</button>
-                  <span class="px-2 text-gray-400">...</span>
-                  <button class="px-4 py-2 rounded-lg border border-gray-300 text-gray-600 hover:bg-gray-50">10</button>
-                  <button class="p-2 rounded-lg border border-gray-300 text-gray-600 hover:text-gray-800">
+                  <button class="px-4 py-2 rounded-lg bg-[#d0ec19] text-[#1d1917] font-semibold font-inter">1</button>
+                  <button class="px-4 py-2 rounded-lg border border-[#292524] bg-[#292524] text-[#a49d9a] hover:bg-[#1d1917] hover:text-[#fafaf9] transition-colors font-inter">2</button>
+                  <button class="px-4 py-2 rounded-lg border border-[#292524] bg-[#292524] text-[#a49d9a] hover:bg-[#1d1917] hover:text-[#fafaf9] transition-colors font-inter">3</button>
+                  <span class="px-2 text-[#a49d9a] font-inter">...</span>
+                  <button class="px-4 py-2 rounded-lg border border-[#292524] bg-[#292524] text-[#a49d9a] hover:bg-[#1d1917] hover:text-[#fafaf9] transition-colors font-inter">10</button>
+                  <button class="p-2 rounded-lg border border-[#292524] bg-[#292524] text-[#a49d9a] hover:text-[#fafaf9] transition-colors">
                     <Icon id="ChevronRight" size={16} />
                   </button>
                 </div>
