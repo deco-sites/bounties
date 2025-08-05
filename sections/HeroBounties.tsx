@@ -87,16 +87,16 @@ export default function HeroBounties({
       )}
       
       {/* Content */}
-      <div class="relative z-10 container mx-auto px-6 pt-8 lg:pt-12 pb-0">
-        <div class="max-w-5xl mx-auto text-center space-y-6">
+      <div class="relative z-10 container mx-auto px-6 pt-8 lg:pt-12">
+        <div class="max-w-5xl mx-auto text-center">
           {/* Join Banner */}
-          <div class="inline-flex items-center px-4 py-2 bg-[#292524] rounded-full text-[#fafaf9] text-sm font-inter">
+          <div class="inline-flex items-center px-4 py-2 bg-[#292524] rounded-full text-[#fafaf9] text-sm font-inter mb-6">
             <span>Join {featuredBuilders}00+ certified AI builders</span>
             <Icon id="ChevronRight" size={16} class="ml-2 text-[#d0ec19]" />
           </div>
 
           {/* Title & Description */}
-          <div class="space-y-4">
+          <div class="space-y-4 mb-6">
             <h1 
               class="text-4xl md:text-6xl lg:text-7xl font-bold leading-[0.9] tracking-tight text-[#fafaf9] font-inter"
               dangerouslySetInnerHTML={{ __html: title }}
@@ -107,7 +107,7 @@ export default function HeroBounties({
           </div>
 
           {/* Search Bar */}
-          <div class="max-w-3xl mx-auto">
+          <div class="max-w-3xl mx-auto mb-0">
             <div class="relative">
               <div class="absolute inset-y-0 left-0 pl-6 flex items-center pointer-events-none">
                 <Icon id="MagnifyingGlass" size={24} class="text-[#a49d9a]" />
