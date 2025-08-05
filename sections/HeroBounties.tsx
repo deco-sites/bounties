@@ -66,9 +66,7 @@ export default function HeroBounties({
             <img 
               src={navbarLogo} 
               alt="Deco Logo" 
-              width={120} 
-              height={48} 
-              class="h-8"
+              class="h-8 w-auto"
             />
           </div>
           
