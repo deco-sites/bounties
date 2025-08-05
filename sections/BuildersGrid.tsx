@@ -191,7 +191,7 @@ export default function BuildersGrid({
 }: Props) {
   
   return (
-    <div class="w-full bg-[#1d1917] pt-0 pb-4 lg:pb-6">
+    <div class="w-full bg-[#1d1917] py-12 lg:py-16">
       <div class="container mx-auto px-4">
         <div class="flex flex-col gap-4">
           {/* Main Content */}

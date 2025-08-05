@@ -3649,9 +3649,6 @@ input.tab:checked + .tab-content,
 .pr-4 {
   padding-right: 1rem;
 }
-.pt-0 {
-  padding-top: 0px;
-}
 .pt-12 {
   padding-top: 3rem;
 }
@@ -4503,6 +4500,11 @@ input.tab:checked + .tab-content,
     padding-bottom: 3.5rem;
   }
 
+  .lg\:py-16 {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
   .lg\:py-28 {
     padding-top: 7rem;
     padding-bottom: 7rem;
@@ -4518,10 +4520,6 @@ input.tab:checked + .tab-content,
 
   .lg\:pb-28 {
     padding-bottom: 7rem;
-  }
-
-  .lg\:pb-6 {
-    padding-bottom: 1.5rem;
   }
 
   .lg\:pt-12 {
