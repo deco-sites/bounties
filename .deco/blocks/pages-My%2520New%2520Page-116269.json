@@ -5,27 +5,12 @@
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
-        "__resolveType": "site/sections/ConnectedBuildersGrid.tsx",
-        "builderPages": [
-          {
-            "experienceLevel": "Junior",
-            "specialties": [],
-            "id": "daniel",
-            "name": "daniel",
-            "title": "daniel",
-            "avatar": "https://assets.decocache.com/bounties/b9179a88-c921-4880-b935-e3fc2e951302/deco-logo-outline.png",
-            "pageUrl": "/user"
-          }
-        ]
-      }
-    },
-    {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "site/sections/BuilderPage.tsx",
-        "builderId": "daniel",
+        "__resolveType": "site/sections/BuilderProfile.tsx",
+        "backButtonUrl": "/gabriel",
         "builder": {
-          "id": "daniel"
+          "name": "gabriel",
+          "id": "123",
+          "title": "daniel"
         }
       }
     }
