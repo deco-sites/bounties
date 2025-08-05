@@ -191,13 +191,13 @@ export default function BuildersGrid({
 }: Props) {
   
   return (
-    <div class="w-full bg-[#1d1917] py-8 lg:py-12">
+    <div class="w-full bg-[#1d1917] py-4 lg:py-6">
       <div class="container mx-auto px-4">
-        <div class="flex flex-col gap-8">
+        <div class="flex flex-col gap-4">
           {/* Main Content */}
           <div class="flex-1">
             {/* Results Header */}
-            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-8 gap-4">
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-4 gap-4">
               <div>
                 <p class="text-[#a49d9a] font-inter">
                   Showing <span class="font-medium text-[#fafaf9]">{builders.length}</span> builders
@@ -225,7 +225,7 @@ export default function BuildersGrid({
             </div>
 
             {/* Builders Grid */}
-            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
               {builders.map((builder) => (
                 <BuilderCard 
                   key={builder.id} 
@@ -236,7 +236,7 @@ export default function BuildersGrid({
 
             {/* Pagination */}
             {showPagination && (
-              <div class="mt-12 flex justify-center">
+              <div class="mt-8 flex justify-center">
                 <div class="flex items-center space-x-2">
                   <button class="p-2 rounded-lg border border-[#292524] bg-[#292524] text-[#a49d9a] hover:text-[#fafaf9] transition-colors">
                     <Icon id="ChevronLeft" size={16} />

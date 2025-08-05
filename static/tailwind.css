@@ -2721,9 +2721,6 @@ input.tab:checked + .tab-content,
 .mt-10 {
   margin-top: 2.5rem;
 }
-.mt-12 {
-  margin-top: 3rem;
-}
 .mt-2 {
   margin-top: 0.5rem;
 }
@@ -4386,8 +4383,8 @@ input.tab:checked + .tab-content,
     line-height: 1;
   }
 
-  .md\:text-7xl {
-    font-size: 4.5rem;
+  .md\:text-6xl {
+    font-size: 3.75rem;
     line-height: 1;
   }
 
@@ -4535,6 +4532,11 @@ input.tab:checked + .tab-content,
     padding-bottom: 7rem;
   }
 
+  .lg\:py-6 {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+
   .lg\:pb-16 {
     padding-bottom: 4rem;
   }
@@ -4564,8 +4566,8 @@ input.tab:checked + .tab-content,
     line-height: 2.5rem;
   }
 
-  .lg\:text-8xl {
-    font-size: 6rem;
+  .lg\:text-7xl {
+    font-size: 4.5rem;
     line-height: 1;
   }
 
