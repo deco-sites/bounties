@@ -2699,6 +2699,9 @@ input.tab:checked + .tab-content,
 .z-10 {
   z-index: 10;
 }
+.z-20 {
+  z-index: 20;
+}
 .z-40 {
   z-index: 40;
 }
@@ -2782,9 +2785,6 @@ input.tab:checked + .tab-content,
 }
 .ml-2 {
   margin-left: 0.5rem;
-}
-.ml-3 {
-  margin-left: 0.75rem;
 }
 .ml-4 {
   margin-left: 1rem;
@@ -3032,6 +3032,9 @@ input.tab:checked + .tab-content,
 }
 .w-\[522px\] {
   width: 522px;
+}
+.w-auto {
+  width: auto;
 }
 .w-full {
   width: 100%;
@@ -3586,11 +3589,6 @@ input.tab:checked + .tab-content,
   --tw-gradient-to: rgb(41 37 36 / 0) var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
-.from-\[\#d0ec19\] {
-  --tw-gradient-from: #d0ec19 var(--tw-gradient-from-position);
-  --tw-gradient-to: rgb(208 236 25 / 0) var(--tw-gradient-to-position);
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-}
 .from-gray-50 {
   --tw-gradient-from: #f9fafb var(--tw-gradient-from-position);
   --tw-gradient-to: rgb(249 250 251 / 0) var(--tw-gradient-to-position);
@@ -3603,9 +3601,6 @@ input.tab:checked + .tab-content,
 }
 .to-\[\#1d1917\] {
   --tw-gradient-to: #1d1917 var(--tw-gradient-to-position);
-}
-.to-\[\#d0ec19\]\/70 {
-  --tw-gradient-to: rgb(208 236 25 / 0.7) var(--tw-gradient-to-position);
 }
 .to-blue-50 {
   --tw-gradient-to: #eff6ff var(--tw-gradient-to-position);
@@ -3655,10 +3650,6 @@ input.tab:checked + .tab-content,
 }
 .p-8 {
   padding: 2rem;
-}
-.px-10 {
-  padding-left: 2.5rem;
-  padding-right: 2.5rem;
 }
 .px-2 {
   padding-left: 0.5rem;
@@ -4203,15 +4194,6 @@ input.tab:checked + .tab-content,
     }
   }
 }
-.hover\:scale-105:hover {
-  --tw-scale-x: 1.05;
-  --tw-scale-y: 1.05;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-.hover\:border-\[\#d0ec19\]:hover {
-  --tw-border-opacity: 1;
-  border-color: rgb(208 236 25 / var(--tw-border-opacity));
-}
 .hover\:border-\[\#d0ec19\]\/30:hover {
   border-color: rgb(208 236 25 / 0.3);
 }
@@ -4243,10 +4225,6 @@ input.tab:checked + .tab-content,
 .hover\:text-\[\#1d1917\]:hover {
   --tw-text-opacity: 1;
   color: rgb(29 25 23 / var(--tw-text-opacity));
-}
-.hover\:text-\[\#d0ec19\]:hover {
-  --tw-text-opacity: 1;
-  color: rgb(208 236 25 / var(--tw-text-opacity));
 }
 .hover\:text-\[\#d0ec19\]\/80:hover {
   color: rgb(208 236 25 / 0.8);

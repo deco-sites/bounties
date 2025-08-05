@@ -50,10 +50,6 @@ export default function AIBuildersHome({
           description={hero.description}
           searchPlaceholder={hero.searchPlaceholder}
           featuredBuilders={hero.featuredBuilders}
-          ctas={[
-            { id: "signup", href: "/signup", text: "Join as Builder", style: "primary" },
-            { id: "browse", href: "/builders", text: "Browse Builders", style: "outline" }
-          ]}
         />
       </section>
 
