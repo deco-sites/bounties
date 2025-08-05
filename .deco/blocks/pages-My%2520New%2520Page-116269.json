@@ -6,12 +6,11 @@
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
         "__resolveType": "site/sections/BuilderProfile.tsx",
-        "backButtonUrl": "/gabriel",
         "builder": {
           "name": "gabriel",
-          "id": "123",
-          "title": "daniel"
-        }
+          "id": "123"
+        },
+        "backButtonUrl": "https://sites-bounties--vdqi85.decocdn.com/gabriel"
       }
     }
   ],

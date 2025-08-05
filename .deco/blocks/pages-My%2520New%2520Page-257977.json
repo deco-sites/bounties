@@ -29,8 +29,8 @@
             "title": "ADM arredondador",
             "bio": "Excited about the intersection of data, AI, and networks. 3x Founder. MIT & McKinsey alumni. Tweets on business building & AI.",
             "isL1Certified": true,
-            "id": "gabriel",
-            "profileUrl": "/gabriel"
+            "id": "123",
+            "profileUrl": "https://sites-bounties--vdqi85.decocdn.com/gabriel"
           },
           {
             "specialties": [],
@@ -42,24 +42,6 @@
           }
         ],
         "showPagination": false
-      }
-    },
-    {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "site/sections/DynamicBuildersGrid.tsx",
-        "staticBuilders": [
-          {
-            "experienceLevel": "Junior",
-            "specialties": [
-              "figma"
-            ],
-            "id": "123",
-            "name": "daniel furtado",
-            "title": "designer",
-            "bio": "product designer"
-          }
-        ]
       }
     }
   ],
