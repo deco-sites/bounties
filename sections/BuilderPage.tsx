@@ -128,6 +128,11 @@ export interface Props {
    * @default "/builders"
    */
   backButtonUrl?: string;
+  /**
+   * @title Test Prop
+   * @description Test prop to verify changes
+   */
+  testProp?: string;
 }
 
 // Default builder data
@@ -135,12 +140,7 @@ const DEFAULT_BUILDER: Builder = {
   id: "sarah-chen",
   name: "Sarah Chen",
   title: "Machine Learning Engineer",
-  avatar: {
-    src: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face",
-    alt: "Sarah Chen",
-    width: 150,
-    height: 150
-  },
+  avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face",
   bio: "Specialized in computer vision and deep learning with 5+ years of experience building production ML systems.",
   fullBio: "Sarah is a senior machine learning engineer with over 5 years of experience in computer vision and deep learning. She has worked on production ML systems at scale, including autonomous vehicles, medical imaging, and recommendation systems. Sarah is passionate about making AI more accessible and ethical.",
   experienceLevel: "Senior",
@@ -171,12 +171,7 @@ const DEFAULT_BUILDER: Builder = {
       id: "1",
       title: "Autonomous Vehicle Perception",
       description: "Developed computer vision system for autonomous vehicle navigation.",
-      image: {
-        src: "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=400&h=200&fit=crop",
-        alt: "Autonomous Vehicle Project",
-        width: 400,
-        height: 200
-      },
+      image: "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=400&h=200&fit=crop",
       url: "https://github.com/sarah-chen/autonomous-vision",
       githubUrl: "https://github.com/sarah-chen/autonomous-vision",
       technologies: ["PyTorch", "OpenCV", "ROS", "C++"],
@@ -186,12 +181,7 @@ const DEFAULT_BUILDER: Builder = {
       id: "2",
       title: "Medical Image Analysis",
       description: "AI system for detecting anomalies in medical imaging.",
-      image: {
-        src: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=400&h=200&fit=crop",
-        alt: "Medical AI Project",
-        width: 400,
-        height: 200
-      },
+      image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=400&h=200&fit=crop",
       url: "https://github.com/sarah-chen/medical-ai",
       githubUrl: "https://github.com/sarah-chen/medical-ai",
       technologies: ["TensorFlow", "DICOM", "Python", "Docker"],
@@ -226,11 +216,17 @@ const DEFAULT_BUILDER: Builder = {
 export default function BuilderPage({
   builder = DEFAULT_BUILDER,
   showBackButton = true,
-  backButtonUrl = "/builders"
+  backButtonUrl = "/builders",
+  testProp = "Default Test Value"
 }: Props) {
   
   return (
     <div class="w-full bg-[#1d1917] min-h-screen">
+      {/* Test Banner - This should change when you modify testProp */}
+      <div class="bg-[#d0ec19] text-[#1d1917] p-4 text-center font-bold">
+        Test Prop Value: {testProp}
+      </div>
+
       {/* Navbar */}
       {showBackButton && (
         <nav class="relative z-20 flex items-center justify-between px-6 py-4 lg:px-8">
@@ -267,7 +263,7 @@ export default function BuilderPage({
               {/* Avatar */}
               <div class="flex-shrink-0">
                 <Image
-                  src={typeof builder.avatar === 'string' ? builder.avatar : builder.avatar.src}
+                  src={builder.avatar}
                   alt={builder.name}
                   width={200}
                   height={200}
@@ -368,7 +364,7 @@ export default function BuilderPage({
                 <div key={project.id} class="bg-[#1d1917] rounded-xl p-6">
                   {project.image && (
                     <Image
-                      src={typeof project.image === 'string' ? project.image : project.image.src}
+                      src={project.image || ""}
                       alt={project.title}
                       width={400}
                       height={200}
