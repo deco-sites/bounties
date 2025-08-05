@@ -87,8 +87,8 @@ export default function HeroBounties({
       )}
       
       {/* Content */}
-      <div class="relative z-10 container mx-auto px-6 pt-2 lg:pt-3 pb-0">
-        <div class="max-w-5xl mx-auto text-center space-y-3">
+      <div class="relative z-10 container mx-auto px-6 pt-8 lg:pt-12 pb-0">
+        <div class="max-w-5xl mx-auto text-center space-y-6">
           {/* Join Banner */}
           <div class="inline-flex items-center px-4 py-2 bg-[#292524] rounded-full text-[#fafaf9] text-sm font-inter">
             <span>Join {featuredBuilders}00+ certified AI builders</span>
@@ -96,7 +96,7 @@ export default function HeroBounties({
           </div>
 
           {/* Title & Description */}
-          <div class="space-y-3">
+          <div class="space-y-4">
             <h1 
               class="text-4xl md:text-6xl lg:text-7xl font-bold leading-[0.9] tracking-tight text-[#fafaf9] font-inter"
               dangerouslySetInnerHTML={{ __html: title }}

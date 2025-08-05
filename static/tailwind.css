@@ -4549,16 +4549,16 @@ input.tab:checked + .tab-content,
     padding-bottom: 1.5rem;
   }
 
+  .lg\:pt-12 {
+    padding-top: 3rem;
+  }
+
   .lg\:pt-20 {
     padding-top: 5rem;
   }
 
   .lg\:pt-28 {
     padding-top: 7rem;
-  }
-
-  .lg\:pt-3 {
-    padding-top: 0.75rem;
   }
 
   .lg\:pt-36 {
