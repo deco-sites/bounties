@@ -7,10 +7,9 @@
       "section": {
         "__resolveType": "site/sections/BuilderProfile.tsx",
         "builder": {
-          "name": "gabriel",
+          "name": "Gabriel Chamas",
           "id": "123"
-        },
-        "backButtonUrl": "https://sites-bounties--vdqi85.decocdn.com/gabriel"
+        }
       }
     }
   ],

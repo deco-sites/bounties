@@ -22,7 +22,7 @@ Sistema completo para diretório de AI Builders inspirado no **agent.ai/builders
 
 ### 3. **Perfis Detalhados**
 - **BuilderDetail**: Página completa do profissional
-- **BuilderProfile**: Página individual com navbar ⭐ NOVO
+- **BuilderPage**: Página individual com navbar ⭐ NOVO
 - Informações pessoais e profissionais
 - Portfólio de projetos em destaque
 - Histórico de experiência
@@ -43,12 +43,12 @@ sections/
 ├── HeroBounties.tsx           # Banner principal com busca
 ├── BuildersGrid.tsx           # Listagem e filtros de builders  
 ├── BuilderDetail.tsx          # Página de perfil completo
-├── BuilderProfile.tsx         # Página individual de builder ⭐ NOVO
+├── BuilderPage.tsx            # Página individual de builder ⭐ NOVO
 ├── AuthLogin.tsx              # Página de login
 └── AuthSignup.tsx             # Página de cadastro
 
 components/ui/
-└── BuilderCard.tsx            # Componente card do builder (navegação personalizada)
+└── BuilderCard.tsx            # Componente card do builder (navegação para /builder/{id})
 ```
 
 ## 🔧 Como Usar no Admin Deco
@@ -65,7 +65,7 @@ Use:
 
 ### 3. **Página de Perfil Individual**
 Use:
-- `BuilderProfile` com dados completos do builder
+- `BuilderPage` com dados completos do builder
 - Inclui navbar com botão "Back to Builders"
 
 ### 4. **Páginas de Autenticação**
@@ -100,7 +100,7 @@ Use:
 ```
 
 ### **Página Individual**
-Use `BuilderProfile` para criar páginas individuais:
+Use `BuilderPage` para criar páginas individuais:
 ```typescript
 {
   builder: {

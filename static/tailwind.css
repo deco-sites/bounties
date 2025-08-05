@@ -2682,9 +2682,6 @@ input.tab:checked + .tab-content,
   margin-top: 0.25rem;
   margin-bottom: 0.25rem;
 }
-.mb-12 {
-  margin-bottom: 3rem;
-}
 .mb-2 {
   margin-bottom: 0.5rem;
 }
@@ -3364,6 +3361,9 @@ input.tab:checked + .tab-content,
 }
 .border-b {
   border-bottom-width: 1px;
+}
+.border-l-2 {
+  border-left-width: 2px;
 }
 .border-t {
   border-top-width: 1px;
@@ -4114,6 +4114,10 @@ input.tab:checked + .tab-content,
 .hover\:bg-\[\#1d1917\]\/80:hover {
   background-color: rgb(29 25 23 / 0.8);
 }
+.hover\:bg-\[\#292524\]:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(41 37 36 / var(--tw-bg-opacity));
+}
 .hover\:bg-\[\#292524\]\/80:hover {
   background-color: rgb(41 37 36 / 0.8);
 }
@@ -4424,6 +4428,10 @@ input.tab:checked + .tab-content,
     display: none;
   }
 
+  .lg\:h-40 {
+    height: 10rem;
+  }
+
   .lg\:max-h-\[600px\] {
     max-height: 600px;
   }
@@ -4434,6 +4442,10 @@ input.tab:checked + .tab-content,
 
   .lg\:w-2\/5 {
     width: 40%;
+  }
+
+  .lg\:w-40 {
+    width: 10rem;
   }
 
   .lg\:w-\[40\%\] {
@@ -4549,6 +4561,11 @@ input.tab:checked + .tab-content,
 
   .lg\:pt-36 {
     padding-top: 9rem;
+  }
+
+  .lg\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
   }
 
   .lg\:text-8xl {
