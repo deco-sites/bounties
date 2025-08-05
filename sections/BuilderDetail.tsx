@@ -191,9 +191,9 @@ export default function BuilderDetail({ builder = MOCK_DETAILED_BUILDER }: Props
   } = builder;
 
   return (
-    <div class="w-full bg-white">
+    <div class="w-full bg-[#1d1917]">
       {/* Hero Section */}
-      <div class="bg-gradient-to-br from-blue-50 to-indigo-100 py-16">
+      <div class="bg-[#1d1917] py-16">
         <div class="container mx-auto px-4">
           <div class="max-w-4xl mx-auto">
             <div class="flex flex-col md:flex-row items-start gap-8">
@@ -205,11 +205,11 @@ export default function BuilderDetail({ builder = MOCK_DETAILED_BUILDER }: Props
                     alt={name}
                     width={150}
                     height={150}
-                    class="w-32 h-32 md:w-40 md:h-40 rounded-2xl object-cover border-4 border-white shadow-lg"
+                    class="w-32 h-32 md:w-40 md:h-40 rounded-2xl object-cover border-4 border-[#292524] shadow-lg"
                   />
                   {isL1Certified && (
-                    <div class="absolute -top-2 -right-2 w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center border-2 border-white">
-                      <Icon id="Discount" size={16} class="text-white" />
+                    <div class="absolute -top-2 -right-2 w-8 h-8 bg-[#d0ec19] rounded-full flex items-center justify-center border-2 border-[#292524]">
+                      <Icon id="Discount" size={16} class="text-[#1d1917]" />
                     </div>
                   )}
                 </div>
@@ -219,38 +219,38 @@ export default function BuilderDetail({ builder = MOCK_DETAILED_BUILDER }: Props
               <div class="flex-1">
                 <div class="flex flex-col md:flex-row md:items-start justify-between gap-4">
                   <div>
-                    <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-2">{name}</h1>
-                    <p class="text-xl text-blue-600 font-medium mb-4">{title}</p>
+                    <h1 class="text-3xl md:text-4xl font-bold text-[#fafaf9] mb-2 font-inter">{name}</h1>
+                    <p class="text-xl text-[#d0ec19] font-medium mb-4 font-inter">{title}</p>
                     
                     {/* Badges */}
                     <div class="flex flex-wrap gap-2 mb-4">
-                      <span class={`px-3 py-1 rounded-full text-sm font-medium ${
+                      <span class={`px-3 py-1 rounded-full text-sm font-medium font-inter ${
                         experienceLevel === "Expert" 
-                          ? "bg-purple-100 text-purple-700"
+                          ? "bg-[#d0ec19]/20 text-[#d0ec19] border border-[#d0ec19]/30"
                           : experienceLevel === "Senior"
-                          ? "bg-blue-100 text-blue-700"
-                          : "bg-green-100 text-green-700"
+                          ? "bg-[#292524] text-[#a49d9a] border border-[#292524]"
+                          : "bg-[#292524] text-[#a49d9a] border border-[#292524]"
                       }`}>
                         {experienceLevel}
                       </span>
                       {isL1Certified && (
-                        <span class="px-3 py-1 rounded-full bg-blue-600 text-white text-sm font-medium">
+                        <span class="px-3 py-1 rounded-full bg-[#d0ec19] text-[#1d1917] text-sm font-medium font-inter">
                           L1 Certified
                         </span>
                       )}
-                      <span class={`px-3 py-1 rounded-full text-sm font-medium ${
+                      <span class={`px-3 py-1 rounded-full text-sm font-medium font-inter ${
                         availability === "Available"
-                          ? "bg-green-100 text-green-700"
+                          ? "bg-[#d0ec19]/20 text-[#d0ec19] border border-[#d0ec19]/30"
                           : availability === "Busy" 
-                          ? "bg-yellow-100 text-yellow-700"
-                          : "bg-red-100 text-red-700"
+                          ? "bg-[#292524] text-[#a49d9a] border border-[#292524]"
+                          : "bg-[#292524] text-[#a49d9a] border border-[#292524]"
                       }`}>
                         {availability}
                       </span>
                     </div>
 
                     {/* Meta Info */}
-                    <div class="flex flex-wrap items-center gap-4 text-gray-600 mb-4">
+                    <div class="flex flex-wrap items-center gap-4 text-[#a49d9a] mb-4 font-inter">
                       {location && (
                         <div class="flex items-center gap-1">
                           <Icon id="MapPin" size={16} />
@@ -259,8 +259,8 @@ export default function BuilderDetail({ builder = MOCK_DETAILED_BUILDER }: Props
                       )}
                       {rating && (
                         <div class="flex items-center gap-1">
-                          <Icon id="Heart" size={16} class="text-yellow-400" />
-                          <span>{rating.toFixed(1)} ({projectsCount} projects)</span>
+                          <Icon id="Heart" size={16} class="text-[#d0ec19]" />
+                          <span>{rating.toFixed(1)}</span>
                         </div>
                       )}
                       {responseTime && (
@@ -272,21 +272,13 @@ export default function BuilderDetail({ builder = MOCK_DETAILED_BUILDER }: Props
                     </div>
                   </div>
 
-                  {/* Price & CTA */}
-                  <div class="flex-shrink-0 text-right">
-                    {price && (
-                      <div class="mb-4">
-                        <div class="text-3xl font-bold text-gray-900">
-                          {price.currency}{price.amount}
-                        </div>
-                        <div class="text-gray-600">/{price.period}</div>
-                      </div>
-                    )}
-                    <div class="flex flex-col gap-2">
-                      <button class="px-6 py-3 bg-blue-600 text-white rounded-xl font-medium hover:bg-blue-700 transition-colors">
+                  {/* CTA */}
+                  <div class="flex-shrink-0">
+                    <div class="flex flex-col gap-3">
+                      <button class="px-8 py-3 bg-[#d0ec19] text-[#1d1917] rounded-xl font-semibold hover:bg-[#d0ec19]/90 transition-all duration-300 hover:shadow-lg hover:shadow-[#d0ec19]/25 font-inter">
                         Contact Builder
                       </button>
-                      <button class="px-6 py-3 border border-gray-300 text-gray-700 rounded-xl font-medium hover:bg-gray-50 transition-colors">
+                      <button class="px-8 py-3 border border-[#292524] bg-[#292524] text-[#fafaf9] rounded-xl font-medium hover:bg-[#292524]/80 transition-colors font-inter">
                         Save Profile
                       </button>
                     </div>
@@ -299,35 +291,35 @@ export default function BuilderDetail({ builder = MOCK_DETAILED_BUILDER }: Props
       </div>
 
       {/* Main Content */}
-      <div class="container mx-auto px-4 py-16">
+      <div class="container mx-auto px-4 py-16 bg-[#1d1917]">
         <div class="max-w-6xl mx-auto">
           <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
             {/* Main Column */}
             <div class="lg:col-span-2 space-y-12">
               {/* About */}
               <section>
-                <h2 class="text-2xl font-bold mb-6">About</h2>
-                <p class="text-gray-700 leading-relaxed">{fullBio}</p>
+                <h2 class="text-2xl font-bold mb-6 text-[#fafaf9] font-inter">About</h2>
+                <p class="text-[#a49d9a] leading-relaxed font-inter">{fullBio}</p>
               </section>
 
               {/* Experience */}
               <section>
-                <h2 class="text-2xl font-bold mb-6">Experience</h2>
+                <h2 class="text-2xl font-bold mb-6 text-[#fafaf9] font-inter">Experience</h2>
                 <div class="space-y-6">
                   {experience.map((exp) => (
-                    <div key={exp.id} class="border border-gray-200 rounded-xl p-6">
+                    <div key={exp.id} class="border border-[#292524] bg-[#292524] rounded-xl p-6">
                       <div class="flex justify-between items-start mb-3">
                         <div>
-                          <h3 class="text-lg font-semibold">{exp.position}</h3>
-                          <p class="text-blue-600 font-medium">{exp.company}</p>
+                          <h3 class="text-lg font-semibold text-[#fafaf9] font-inter">{exp.position}</h3>
+                          <p class="text-[#d0ec19] font-medium font-inter">{exp.company}</p>
                         </div>
-                        <span class="text-gray-500 text-sm">{exp.duration}</span>
+                        <span class="text-[#a49d9a] text-sm font-inter">{exp.duration}</span>
                       </div>
-                      <p class="text-gray-700 mb-4">{exp.description}</p>
+                      <p class="text-[#a49d9a] mb-4 font-inter">{exp.description}</p>
                       {exp.technologies && (
                         <div class="flex flex-wrap gap-2">
                           {exp.technologies.map((tech) => (
-                            <span key={tech} class="px-2 py-1 bg-gray-100 text-gray-700 text-sm rounded-lg">
+                            <span key={tech} class="px-3 py-1 bg-[#1d1917] text-[#a49d9a] text-sm rounded-lg border border-[#1d1917] font-inter">
                               {tech}
                             </span>
                           ))}
@@ -340,10 +332,10 @@ export default function BuilderDetail({ builder = MOCK_DETAILED_BUILDER }: Props
 
               {/* Projects */}
               <section>
-                <h2 class="text-2xl font-bold mb-6">Featured Projects</h2>
+                <h2 class="text-2xl font-bold mb-6 text-[#fafaf9] font-inter">Featured Projects</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                   {projects.filter(p => p.featured).map((project) => (
-                    <div key={project.id} class="border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition-shadow">
+                    <div key={project.id} class="border border-[#292524] bg-[#292524] rounded-xl overflow-hidden hover:shadow-lg hover:shadow-[#d0ec19]/10 transition-all duration-300 hover:border-[#d0ec19]/30">
                       {project.image && (
                         <Image
                           src={project.image}
@@ -354,26 +346,26 @@ export default function BuilderDetail({ builder = MOCK_DETAILED_BUILDER }: Props
                         />
                       )}
                       <div class="p-6">
-                        <h3 class="text-lg font-semibold mb-2">{project.title}</h3>
-                        <p class="text-gray-700 text-sm mb-4">{project.description}</p>
+                        <h3 class="text-lg font-semibold mb-2 text-[#fafaf9] font-inter">{project.title}</h3>
+                        <p class="text-[#a49d9a] text-sm mb-4 font-inter">{project.description}</p>
                         <div class="flex flex-wrap gap-2 mb-4">
                           {project.technologies.slice(0, 3).map((tech) => (
-                            <span key={tech} class="px-2 py-1 bg-blue-100 text-blue-700 text-xs rounded-lg">
+                            <span key={tech} class="px-3 py-1 bg-[#d0ec19]/20 text-[#d0ec19] text-xs rounded-lg border border-[#d0ec19]/30 font-inter">
                               {tech}
                             </span>
                           ))}
                           {project.technologies.length > 3 && (
-                            <span class="px-2 py-1 bg-gray-100 text-gray-500 text-xs rounded-lg">
+                            <span class="px-3 py-1 bg-[#1d1917] text-[#a49d9a] text-xs rounded-lg border border-[#1d1917] font-inter">
                               +{project.technologies.length - 3}
                             </span>
                           )}
                         </div>
                         <div class="flex gap-3">
                           {project.url && (
-                            <a href={project.url} class="text-blue-600 hover:underline text-sm">Live Demo</a>
+                            <a href={project.url} class="text-[#d0ec19] hover:text-[#d0ec19]/80 text-sm font-inter">Live Demo</a>
                           )}
                           {project.githubUrl && (
-                            <a href={project.githubUrl} class="text-blue-600 hover:underline text-sm">GitHub</a>
+                            <a href={project.githubUrl} class="text-[#d0ec19] hover:text-[#d0ec19]/80 text-sm font-inter">GitHub</a>
                           )}
                         </div>
                       </div>
@@ -386,11 +378,11 @@ export default function BuilderDetail({ builder = MOCK_DETAILED_BUILDER }: Props
             {/* Sidebar */}
             <div class="space-y-8">
               {/* Skills */}
-              <div class="bg-gray-50 rounded-xl p-6">
-                <h3 class="text-lg font-semibold mb-4">Skills</h3>
+              <div class="bg-[#292524] rounded-xl p-6 border border-[#292524]">
+                <h3 class="text-lg font-semibold mb-4 text-[#fafaf9] font-inter">Skills</h3>
                 <div class="flex flex-wrap gap-2">
                   {skills.map((skill) => (
-                    <span key={skill} class="px-3 py-1 bg-white text-gray-700 text-sm rounded-lg border">
+                    <span key={skill} class="px-3 py-1 bg-[#1d1917] text-[#a49d9a] text-sm rounded-lg border border-[#1d1917] font-inter">
                       {skill}
                     </span>
                   ))}
@@ -398,40 +390,40 @@ export default function BuilderDetail({ builder = MOCK_DETAILED_BUILDER }: Props
               </div>
 
               {/* Specialties */}
-              <div class="bg-gray-50 rounded-xl p-6">
-                <h3 class="text-lg font-semibold mb-4">Specialties</h3>
+              <div class="bg-[#292524] rounded-xl p-6 border border-[#292524]">
+                <h3 class="text-lg font-semibold mb-4 text-[#fafaf9] font-inter">Specialties</h3>
                 <div class="space-y-2">
                   {specialties.map((specialty) => (
                     <div key={specialty} class="flex items-center gap-2">
-                      <Icon id="Discount" size={16} class="text-blue-600" />
-                      <span class="text-gray-700">{specialty}</span>
+                      <Icon id="Discount" size={16} class="text-[#d0ec19]" />
+                      <span class="text-[#a49d9a] font-inter">{specialty}</span>
                     </div>
                   ))}
                 </div>
               </div>
 
               {/* Certifications */}
-              <div class="bg-gray-50 rounded-xl p-6">
-                <h3 class="text-lg font-semibold mb-4">Certifications</h3>
+              <div class="bg-[#292524] rounded-xl p-6 border border-[#292524]">
+                <h3 class="text-lg font-semibold mb-4 text-[#fafaf9] font-inter">Certifications</h3>
                 <div class="space-y-2">
                   {certifications.map((cert) => (
                     <div key={cert} class="flex items-center gap-2">
-                      <Icon id="Discount" size={16} class="text-green-600" />
-                      <span class="text-gray-700 text-sm">{cert}</span>
+                      <Icon id="Discount" size={16} class="text-[#d0ec19]" />
+                      <span class="text-[#a49d9a] text-sm font-inter">{cert}</span>
                     </div>
                   ))}
                 </div>
               </div>
 
               {/* Education */}
-              <div class="bg-gray-50 rounded-xl p-6">
-                <h3 class="text-lg font-semibold mb-4">Education</h3>
+              <div class="bg-[#292524] rounded-xl p-6 border border-[#292524]">
+                <h3 class="text-lg font-semibold mb-4 text-[#fafaf9] font-inter">Education</h3>
                 <div class="space-y-3">
                   {education.map((edu) => (
                     <div key={edu.id}>
-                      <p class="font-medium text-gray-900">{edu.degree} in {edu.field}</p>
-                      <p class="text-sm text-gray-600">{edu.institution}</p>
-                      <p class="text-sm text-gray-500">{edu.year}</p>
+                      <p class="font-medium text-[#fafaf9] font-inter">{edu.degree} in {edu.field}</p>
+                      <p class="text-sm text-[#a49d9a] font-inter">{edu.institution}</p>
+                      <p class="text-sm text-[#a49d9a] font-inter">{edu.year}</p>
                     </div>
                   ))}
                 </div>
@@ -439,26 +431,26 @@ export default function BuilderDetail({ builder = MOCK_DETAILED_BUILDER }: Props
 
               {/* Social Links */}
               {socialLinks && (
-                <div class="bg-gray-50 rounded-xl p-6">
-                  <h3 class="text-lg font-semibold mb-4">Connect</h3>
+                <div class="bg-[#292524] rounded-xl p-6 border border-[#292524]">
+                  <h3 class="text-lg font-semibold mb-4 text-[#fafaf9] font-inter">Connect</h3>
                   <div class="flex flex-wrap gap-3">
                     {socialLinks.linkedin && (
-                      <a href={socialLinks.linkedin} class="p-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
+                      <a href={socialLinks.linkedin} class="p-3 bg-[#d0ec19] text-[#1d1917] rounded-lg hover:bg-[#d0ec19]/90 transition-colors">
                         <Icon id="Linkedin" size={16} />
                       </a>
                     )}
                     {socialLinks.github && (
-                      <a href={socialLinks.github} class="p-2 bg-gray-800 text-white rounded-lg hover:bg-gray-900">
+                      <a href={socialLinks.github} class="p-3 bg-[#1d1917] text-[#fafaf9] rounded-lg hover:bg-[#1d1917]/80 transition-colors border border-[#1d1917]">
                         <Icon id="Discount" size={16} />
                       </a>
                     )}
                     {socialLinks.website && (
-                      <a href={socialLinks.website} class="p-2 bg-green-600 text-white rounded-lg hover:bg-green-700">
+                      <a href={socialLinks.website} class="p-3 bg-[#d0ec19] text-[#1d1917] rounded-lg hover:bg-[#d0ec19]/90 transition-colors">
                         <Icon id="Link" size={16} />
                       </a>
                     )}
                     {socialLinks.twitter && (
-                      <a href={socialLinks.twitter} class="p-2 bg-blue-400 text-white rounded-lg hover:bg-blue-500">
+                      <a href={socialLinks.twitter} class="p-3 bg-[#1d1917] text-[#fafaf9] rounded-lg hover:bg-[#1d1917]/80 transition-colors border border-[#1d1917]">
                         <Icon id="XTwitter" size={16} />
                       </a>
                     )}

@@ -187,15 +187,7 @@ export default function BuilderCard({
               </div>
             </div>
 
-            {/* Price */}
-            {showPrice && price && (
-              <div class="text-right">
-                <div class="text-lg font-bold text-[#fafaf9] font-inter">
-                  {price.currency}{price.amount}
-                </div>
-                <div class="text-xs text-[#a49d9a] font-inter">/{price.period}</div>
-              </div>
-            )}
+
           </div>
         </div>
 
@@ -242,9 +234,6 @@ export default function BuilderCard({
                 </div>
               )}
             </div>
-            {projectsCount && (
-              <span>{projectsCount} projects</span>
-            )}
           </div>
         </div>
       </div>
