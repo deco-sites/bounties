@@ -1,0 +1,19 @@
+{
+  "name": "Marcus Johnson - NLP Specialist",
+  "sections": [
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/MarcusJohnsonPage.tsx"
+      }
+    }
+  ],
+  "seo": {
+    "__resolveType": "website/sections/Seo/SeoV2.tsx",
+    "title": "Marcus Johnson - NLP Specialist | AI Builders",
+    "description": "Marcus Johnson is an expert NLP specialist with over 6 years of experience in natural language processing and large language models.",
+    "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face"
+  },
+  "__resolveType": "website/pages/Page.tsx",
+  "path": "/builder/marcus-johnson"
+} 

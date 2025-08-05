@@ -1,0 +1,19 @@
+{
+  "name": "Alexandra Wang - Data Scientist",
+  "sections": [
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/AlexandraWangPage.tsx"
+      }
+    }
+  ],
+  "seo": {
+    "__resolveType": "website/sections/Seo/SeoV2.tsx",
+    "title": "Alexandra Wang - Data Scientist | AI Builders",
+    "description": "Alexandra Wang is a data scientist with over 4 years of experience in predictive analytics and machine learning for healthcare applications.",
+    "image": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&h=150&fit=crop&crop=face"
+  },
+  "__resolveType": "website/pages/Page.tsx",
+  "path": "/builder/alexandra-wang"
+} 

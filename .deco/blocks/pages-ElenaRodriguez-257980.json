@@ -1,0 +1,19 @@
+{
+  "name": "Elena Rodriguez - AI Product Manager",
+  "sections": [
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/ElenaRodriguezPage.tsx"
+      }
+    }
+  ],
+  "seo": {
+    "__resolveType": "website/sections/Seo/SeoV2.tsx",
+    "title": "Elena Rodriguez - AI Product Manager | AI Builders",
+    "description": "Elena Rodriguez is a senior AI product manager with over 7 years of experience in AI strategy and implementation.",
+    "image": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face"
+  },
+  "__resolveType": "website/pages/Page.tsx",
+  "path": "/builder/elena-rodriguez"
+} 

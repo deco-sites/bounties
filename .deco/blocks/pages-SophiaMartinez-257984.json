@@ -1,0 +1,19 @@
+{
+  "name": "Sophia Martinez - MLOps Engineer",
+  "sections": [
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/SophiaMartinezPage.tsx"
+      }
+    }
+  ],
+  "seo": {
+    "__resolveType": "website/sections/Seo/SeoV2.tsx",
+    "title": "Sophia Martinez - MLOps Engineer | AI Builders",
+    "description": "Sophia Martinez is a senior MLOps engineer with over 5 years of experience building scalable machine learning infrastructure.",
+    "image": "https://images.unsplash.com/photo-1487412720507-7e378adf7ca3?w=150&h=150&fit=crop&crop=face"
+  },
+  "__resolveType": "website/pages/Page.tsx",
+  "path": "/builder/sophia-martinez"
+} 

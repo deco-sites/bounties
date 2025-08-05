@@ -1,0 +1,19 @@
+{
+  "name": "Sarah Chen - Machine Learning Engineer",
+  "sections": [
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/SarahChenPage.tsx"
+      }
+    }
+  ],
+  "seo": {
+    "__resolveType": "website/sections/Seo/SeoV2.tsx",
+    "title": "Sarah Chen - Machine Learning Engineer | AI Builders",
+    "description": "Sarah Chen is a senior machine learning engineer specializing in computer vision and deep learning with 5+ years of experience building production ML systems.",
+    "image": "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face"
+  },
+  "__resolveType": "website/pages/Page.tsx",
+  "path": "/builder/sarah-chen"
+} 

@@ -1,0 +1,19 @@
+{
+  "name": "Michael Chen - AI Research Engineer",
+  "sections": [
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/MichaelChenPage.tsx"
+      }
+    }
+  ],
+  "seo": {
+    "__resolveType": "website/sections/Seo/SeoV2.tsx",
+    "title": "Michael Chen - AI Research Engineer | AI Builders",
+    "description": "Michael Chen is an AI research engineer with over 6 years of experience in cutting-edge AI algorithms and neural network architectures.",
+    "image": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face"
+  },
+  "__resolveType": "website/pages/Page.tsx",
+  "path": "/builder/michael-chen"
+} 

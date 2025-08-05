@@ -1,6 +1,5 @@
 {
-  "name": "My New Page",
-  "path": "/page",
+  "name": "Home",
   "sections": [
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
@@ -11,42 +10,13 @@
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
-        "__resolveType": "site/sections/BuildersGrid.tsx",
-        "builders": [
-          {
-            "specialties": [
-              "htmx",
-              "react"
-            ],
-            "experienceLevel": "Junior",
-            "skills": [
-              "htmx"
-            ],
-            "price": {
-              "period": "hour"
-            },
-            "name": "Gabriel Chamas",
-            "title": "ADM arredondador",
-            "bio": "Excited about the intersection of data, AI, and networks. 3x Founder. MIT & McKinsey alumni. Tweets on business building & AI.",
-            "isL1Certified": true,
-            "id": "123",
-            "profileUrl": "https://sites-bounties--vdqi85.decocdn.com/gabriel"
-          },
-          {
-            "specialties": [],
-            "experienceLevel": "Junior",
-            "skills": [],
-            "price": {
-              "period": "hour"
-            }
-          }
-        ],
-        "showPagination": false
+        "__resolveType": "site/sections/BuildersGrid.tsx"
       }
     }
   ],
   "seo": {
     "__resolveType": "website/sections/Seo/SeoV2.tsx"
   },
-  "__resolveType": "website/pages/Page.tsx"
+  "__resolveType": "website/pages/Page.tsx",
+  "path": "/"
 }

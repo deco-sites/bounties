@@ -1,0 +1,19 @@
+{
+  "name": "James Wilson - Computer Vision Engineer",
+  "sections": [
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/JamesWilsonPage.tsx"
+      }
+    }
+  ],
+  "seo": {
+    "__resolveType": "website/sections/Seo/SeoV2.tsx",
+    "title": "James Wilson - Computer Vision Engineer | AI Builders",
+    "description": "James Wilson is a senior computer vision engineer with over 7 years of experience developing advanced image processing and object detection systems.",
+    "image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face"
+  },
+  "__resolveType": "website/pages/Page.tsx",
+  "path": "/builder/james-wilson"
+} 
