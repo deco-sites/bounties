@@ -97,8 +97,8 @@ export default function HeroBounties({
               <input
                 type="text"
                 placeholder={searchPlaceholder}
-                class="w-full px-6 py-4 bg-[#292524] border border-[#404040] rounded-xl text-[#fafaf9] placeholder-[#a49d9a] font-inter focus:outline-none focus:border-[#d0ec19] transition-colors"
-                onInput="this.nextElementSibling.style.opacity = this.value ? '1' : '0.5'"
+                class="w-full px-6 py-4 bg-[#292524] border border-[#404040] rounded-xl text-[#fafaf9] placeholder-[#a49d9a] font-inter focus:outline-none focus:border-[#d0ec19] focus:shadow-lg focus:shadow-[#d0ec19]/20 transition-all duration-300"
+                onInput="this.nextElementSibling.style.opacity = this.value ? '1' : '0.5'; this.nextElementSibling.style.backgroundColor = this.value ? '#d0ec19' : '#404040'; this.nextElementSibling.style.color = this.value ? '#1d1917' : '#a49d9a'"
               />
             </div>
             <button

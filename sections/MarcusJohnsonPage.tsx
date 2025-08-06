@@ -137,7 +137,7 @@ export default function MarcusJohnsonPage({
                             href={builder.socialLinks.linkedin}
                             target="_blank"
                             rel="noopener noreferrer"
-                            class="p-3 bg-[#1d1917] text-[#fafaf9] rounded-xl hover:bg-[#292524] transition-colors"
+                            class="p-3 bg-[#d0ec19] text-[#1d1917] rounded-xl hover:bg-[#d0ec19]/90 transition-colors"
                             title="LinkedIn"
                           >
                             <Icon id="Linkedin" size={20} />
@@ -148,7 +148,7 @@ export default function MarcusJohnsonPage({
                             href={builder.socialLinks.github}
                             target="_blank"
                             rel="noopener noreferrer"
-                            class="p-3 bg-[#1d1917] text-[#fafaf9] rounded-xl hover:bg-[#292524] transition-colors"
+                            class="p-3 bg-[#d0ec19] text-[#1d1917] rounded-xl hover:bg-[#d0ec19]/90 transition-colors"
                             title="GitHub"
                           >
                             <Icon id="GitHub" size={20} />
@@ -159,7 +159,7 @@ export default function MarcusJohnsonPage({
                             href={builder.socialLinks.website}
                             target="_blank"
                             rel="noopener noreferrer"
-                            class="p-3 bg-[#1d1917] text-[#fafaf9] rounded-xl hover:bg-[#292524] transition-colors"
+                            class="p-3 bg-[#d0ec19] text-[#1d1917] rounded-xl hover:bg-[#d0ec19]/90 transition-colors"
                             title="Website"
                           >
                             <Icon id="Language" size={20} />
@@ -170,7 +170,7 @@ export default function MarcusJohnsonPage({
                             href={builder.socialLinks.twitter}
                             target="_blank"
                             rel="noopener noreferrer"
-                            class="p-3 bg-[#1d1917] text-[#fafaf9] rounded-xl hover:bg-[#292524] transition-colors"
+                            class="p-3 bg-[#d0ec19] text-[#1d1917] rounded-xl hover:bg-[#d0ec19]/90 transition-colors"
                             title="Twitter"
                           >
                             <Icon id="Twitter" size={20} />
@@ -198,7 +198,7 @@ export default function MarcusJohnsonPage({
                 <h3 class="text-xl font-bold text-[#fafaf9] mb-4 font-inter">Skills</h3>
                 <div class="flex flex-wrap gap-2">
                   {builder.skills.map((skill) => (
-                    <span class="px-3 py-1 bg-[#1d1917] text-[#fafaf9] rounded-full text-sm font-inter">
+                    <span class="px-3 py-1 bg-[#d0ec19] text-[#1d1917] rounded-full text-sm font-inter">
                       {skill}
                     </span>
                   ))}
@@ -210,7 +210,7 @@ export default function MarcusJohnsonPage({
                 <h3 class="text-xl font-bold text-[#fafaf9] mb-4 font-inter">Certifications</h3>
                 <div class="flex flex-wrap gap-2">
                   {builder.certifications.map((cert) => (
-                    <span class="px-3 py-1 bg-[#1d1917] text-[#fafaf9] rounded-full text-sm font-inter">
+                    <span class="px-3 py-1 bg-[#d0ec19] text-[#1d1917] rounded-full text-sm font-inter">
                       {cert}
                     </span>
                   ))}

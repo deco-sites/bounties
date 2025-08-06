@@ -214,7 +214,7 @@ export default function BuildersGrid({
                 )}
 
                 {/* Sort */}
-                <select class="border border-[#292524] bg-[#292524] text-[#fafaf9] rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-[#d0ec19] focus:border-[#d0ec19] outline-none font-inter">
+                <select class="border border-[#292524] bg-[#292524] text-[#fafaf9] rounded-lg px-4 py-2 text-sm focus:ring-2 focus:ring-[#d0ec19] focus:border-[#d0ec19] outline-none font-inter appearance-none pr-10">
                   <option>Sort by: Relevance</option>
                   <option>Sort by: Rating</option>
                   <option>Sort by: Price (Low to High)</option>

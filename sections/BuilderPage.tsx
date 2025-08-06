@@ -147,7 +147,7 @@ export default function BuilderPage({
           {/* Back Button */}
           <a
             href={backButtonUrl}
-            class="px-4 py-2 border border-[#292524] bg-[#292524] text-[#fafaf9] rounded-lg hover:bg-[#292524]/80 transition-colors font-inter flex items-center"
+            class="px-4 py-2 border border-[#292524] bg-[#292524] text-[#fafaf9] rounded-lg hover:bg-[#d0ec19]/90/80 transition-colors font-inter flex items-center"
           >
             <Icon id="ChevronLeft" size={16} class="mr-2" />
             Back to Builders
@@ -216,7 +216,7 @@ export default function BuilderPage({
             <h3 class="text-2xl font-bold text-[#fafaf9] mb-4 font-inter">Skills</h3>
             <div class="flex flex-wrap gap-2">
               {builder.skills.map((skill) => (
-                <span class="px-3 py-1 bg-[#1d1917] text-[#fafaf9] rounded-full text-sm font-inter">
+                <span class="px-3 py-1 bg-[#d0ec19] text-[#1d1917] rounded-full text-sm font-inter">
                   {skill}
                 </span>
               ))}
@@ -230,7 +230,7 @@ export default function BuilderPage({
             <h3 class="text-2xl font-bold text-[#fafaf9] mb-4 font-inter">Certifications</h3>
             <div class="flex flex-wrap gap-2">
               {builder.certifications.map((cert) => (
-                <span class="px-3 py-1 bg-[#1d1917] text-[#fafaf9] rounded-full text-sm font-inter">
+                <span class="px-3 py-1 bg-[#d0ec19] text-[#1d1917] rounded-full text-sm font-inter">
                   {cert}
                 </span>
               ))}
@@ -257,7 +257,7 @@ export default function BuilderPage({
                     href={builder.socialLinks.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="px-4 py-2 border border-[#292524] text-[#fafaf9] rounded-lg font-inter hover:bg-[#292524] transition-colors"
+                    class="px-4 py-2 border border-[#292524] text-[#fafaf9] rounded-lg font-inter hover:bg-[#d0ec19]/90 transition-colors"
                   >
                     GitHub
                   </a>
@@ -267,7 +267,7 @@ export default function BuilderPage({
                     href={builder.socialLinks.website}
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="px-4 py-2 border border-[#292524] text-[#fafaf9] rounded-lg font-inter hover:bg-[#292524] transition-colors"
+                    class="px-4 py-2 border border-[#292524] text-[#fafaf9] rounded-lg font-inter hover:bg-[#d0ec19]/90 transition-colors"
                   >
                     Website
                   </a>
