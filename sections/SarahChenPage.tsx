@@ -1,7 +1,6 @@
 import { ImageWidget } from "apps/admin/widgets.ts";
 import Image from "apps/website/components/Image.tsx";
 import Icon from "site/components/ui/Icon.tsx";
-
 export interface Builder {
   id: string;
   name: string;
@@ -21,7 +20,6 @@ export interface Builder {
     twitter?: string;
   };
 }
-
 export interface Props {
   builder?: Builder;
   showBackButton?: boolean;
@@ -31,7 +29,6 @@ export interface Props {
   navbarButtonText?: string;
   navbarButtonUrl?: string;
 }
-
 const SARAH_CHEN_BUILDER: Builder = {
   id: "sarah-chen",
   name: "Sarah Chen",
@@ -51,14 +48,12 @@ const SARAH_CHEN_BUILDER: Builder = {
     twitter: "https://twitter.com/sarah_chen_ai"
   }
 };
-
 export default function SarahChenPage({
   builder = SARAH_CHEN_BUILDER,
   showBackButton = true,
   backButtonUrl = "/",
   testProp = "Sarah Chen Page"
 }: Props) {
-  
   return (
     <div class="w-full bg-[#1d1917] min-h-screen">
       {/* Back Button */}
@@ -73,7 +68,6 @@ export default function SarahChenPage({
           </a>
         </div>
       )}
-
       {/* Builder Profile */}
       <div class="container mx-auto px-4 py-8">
         <div class="max-w-6xl mx-auto">
@@ -92,7 +86,6 @@ export default function SarahChenPage({
                       class="w-32 h-32 lg:w-40 lg:h-40 rounded-full object-cover"
                     />
                   </div>
-                  
                   <div class="flex-1">
                     <div class="flex items-center gap-3 mb-4">
                       <h1 class="text-3xl lg:text-4xl font-bold text-[#fafaf9] font-inter">
@@ -113,22 +106,18 @@ export default function SarahChenPage({
                         </div>
                       )}
                     </div>
-                    
                     <h2 class="text-xl text-[#d0ec19] font-inter mb-4">
                       {builder.title}
                     </h2>
-                    
                     <p class="text-[#a49d9a] font-inter mb-4">
                       {builder.bio}
                     </p>
-                    
                     {builder.location && (
                       <div class="flex items-center text-[#a49d9a] font-inter mb-4">
                         <Icon id="LocationOn" size={20} class="mr-2 text-[#d0ec19]" />
                         {builder.location}
                       </div>
                     )}
-
                     {/* Social Links */}
                     {builder.socialLinks && (
                       <div class="flex gap-3">
@@ -170,7 +159,6 @@ export default function SarahChenPage({
                   </div>
                 </div>
               </div>
-
               {/* About Section */}
               <div class="bg-[#292524] rounded-2xl p-8 mb-8">
                 <h3 class="text-2xl font-bold text-[#fafaf9] mb-4 font-inter">About</h3>
@@ -179,7 +167,6 @@ export default function SarahChenPage({
                 </p>
               </div>
             </div>
-
             {/* Sidebar */}
             <div class="lg:col-span-1">
               {/* Skills */}
@@ -193,7 +180,6 @@ export default function SarahChenPage({
                     ))}
                   </div>
               </div>
-
               {/* Certifications */}
                               <div class="bg-[#292524] rounded-2xl p-6">
                   <h3 class="text-xl font-bold text-[#fafaf9] mb-4 font-inter">Certifications</h3>
