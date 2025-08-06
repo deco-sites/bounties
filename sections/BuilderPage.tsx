@@ -124,7 +124,7 @@ export default function BuilderPage({
   return (
     <div class="w-full bg-[#1d1917] min-h-screen">
       {/* Test Banner - This should change when you modify testProp */}
-      <div class="bg-[#d0ec19] text-[#1d1917] p-4 text-center font-bold">
+      <div class="bg-[#1d1917] text-[#fafaf9] p-4 text-center font-bold">
         Test Prop Value: {testProp}
       </div>
 
@@ -147,7 +147,7 @@ export default function BuilderPage({
           {/* Back Button */}
           <a
             href={backButtonUrl}
-            class="px-4 py-2 border border-[#292524] bg-[#292524] text-[#fafaf9] rounded-lg hover:bg-[#d0ec19]/90/80 transition-colors font-inter flex items-center"
+            class="px-4 py-2 border border-[#292524] bg-[#292524] text-[#fafaf9] rounded-lg hover:bg-[#292524]/80 transition-colors font-inter flex items-center"
           >
             <Icon id="ChevronLeft" size={16} class="mr-2" />
             Back to Builders
@@ -179,7 +179,7 @@ export default function BuilderPage({
                     {builder.name}
                   </h1>
                   {builder.isL1Certified && (
-                    <span class="px-3 py-1 bg-[#d0ec19] text-[#1d1917] rounded-full text-sm font-semibold font-inter">
+                    <span class="px-3 py-1 bg-[#1d1917] text-[#fafaf9] rounded-full text-sm font-semibold font-inter">
                       L1 Certified
                     </span>
                   )}
@@ -216,7 +216,7 @@ export default function BuilderPage({
             <h3 class="text-2xl font-bold text-[#fafaf9] mb-4 font-inter">Skills</h3>
             <div class="flex flex-wrap gap-2">
               {builder.skills.map((skill) => (
-                <span class="px-3 py-1 bg-[#d0ec19] text-[#1d1917] rounded-full text-sm font-inter">
+                <span class="px-3 py-1 bg-[#1d1917] text-[#fafaf9] rounded-full text-sm font-inter">
                   {skill}
                 </span>
               ))}
@@ -230,7 +230,7 @@ export default function BuilderPage({
             <h3 class="text-2xl font-bold text-[#fafaf9] mb-4 font-inter">Certifications</h3>
             <div class="flex flex-wrap gap-2">
               {builder.certifications.map((cert) => (
-                <span class="px-3 py-1 bg-[#d0ec19] text-[#1d1917] rounded-full text-sm font-inter">
+                <span class="px-3 py-1 bg-[#1d1917] text-[#fafaf9] rounded-full text-sm font-inter">
                   {cert}
                 </span>
               ))}
@@ -247,7 +247,7 @@ export default function BuilderPage({
                     href={builder.socialLinks.linkedin}
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="px-4 py-2 bg-[#d0ec19] text-[#1d1917] rounded-lg font-semibold font-inter hover:bg-[#d0ec19]/90 transition-colors"
+                    class="px-4 py-2 bg-[#1d1917] text-[#fafaf9] rounded-lg font-semibold font-inter hover:bg-[#292524] transition-colors"
                   >
                     LinkedIn
                   </a>
@@ -257,7 +257,7 @@ export default function BuilderPage({
                     href={builder.socialLinks.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="px-4 py-2 border border-[#292524] text-[#fafaf9] rounded-lg font-inter hover:bg-[#d0ec19]/90 transition-colors"
+                    class="px-4 py-2 border border-[#292524] text-[#fafaf9] rounded-lg font-inter hover:bg-[#292524] transition-colors"
                   >
                     GitHub
                   </a>
@@ -267,7 +267,7 @@ export default function BuilderPage({
                     href={builder.socialLinks.website}
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="px-4 py-2 border border-[#292524] text-[#fafaf9] rounded-lg font-inter hover:bg-[#d0ec19]/90 transition-colors"
+                    class="px-4 py-2 border border-[#292524] text-[#fafaf9] rounded-lg font-inter hover:bg-[#292524] transition-colors"
                   >
                     Website
                   </a>

@@ -137,10 +137,10 @@ export default function SarahChenPage({
                             href={builder.socialLinks.linkedin}
                             target="_blank"
                             rel="noopener noreferrer"
-                            class="p-3 bg-[#d0ec19] text-[#1d1917] rounded-xl hover:bg-[#d0ec19]/90 transition-colors"
+                            class="p-3 bg-[#1d1917] text-[#fafaf9] rounded-xl hover:bg-[#292524] transition-colors"
                             title="LinkedIn"
                           >
-                            <Icon id="Linkedin" size={20} />
+                            <img src="https://assets.decocache.com/bounties/83e9c0f9-1cc8-42b3-a105-7d3652623ceb/Linkedin.svg" alt="LinkedIn" class="w-5 h-5" />
                           </a>
                         )}
                         {builder.socialLinks.github && (
@@ -148,10 +148,10 @@ export default function SarahChenPage({
                             href={builder.socialLinks.github}
                             target="_blank"
                             rel="noopener noreferrer"
-                            class="p-3 bg-[#d0ec19] text-[#1d1917] rounded-xl hover:bg-[#d0ec19]/90 transition-colors"
+                            class="p-3 bg-[#1d1917] text-[#fafaf9] rounded-xl hover:bg-[#292524] transition-colors"
                             title="GitHub"
                           >
-                            <Icon id="GitHub" size={20} />
+                            <img src="https://assets.decocache.com/bounties/5a364682-eb40-4027-9c0d-d5e258a34f5f/Github.svg" alt="GitHub" class="w-5 h-5" />
                           </a>
                         )}
                         {builder.socialLinks.website && (
@@ -159,10 +159,10 @@ export default function SarahChenPage({
                             href={builder.socialLinks.website}
                             target="_blank"
                             rel="noopener noreferrer"
-                            class="p-3 bg-[#d0ec19] text-[#1d1917] rounded-xl hover:bg-[#d0ec19]/90 transition-colors"
+                            class="p-3 bg-[#1d1917] text-[#fafaf9] rounded-xl hover:bg-[#292524] transition-colors"
                             title="Website"
                           >
-                            <Icon id="Language" size={20} />
+                            <img src="https://assets.decocache.com/bounties/1c9de2d9-d4fb-4c07-bf27-a5d7944f149d/website.svg" alt="Website" class="w-5 h-5" />
                           </a>
                         )}
                       </div>
