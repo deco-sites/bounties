@@ -36,7 +36,7 @@ const SOPHIA_MARTINEZ_BUILDER: Builder = {
   id: "sophia-martinez",
   name: "Sophia Martinez",
   title: "MLOps Engineer",
-  avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b2a2?w=150&h=150&fit=crop&crop=face",
+  avatar: "https://images.unsplash.com/photo-1506863530036-1efeddceb993?q=80&w=1644&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   bio: "MLOps specialist building scalable machine learning infrastructure and deployment pipelines.",
   fullBio: "Sophia is a senior MLOps engineer with over 5 years of experience building scalable machine learning infrastructure and deployment pipelines. She has designed and implemented CI/CD systems for ML models, monitoring solutions, and automated deployment strategies. Sophia specializes in Kubernetes, Docker, cloud infrastructure, and ensuring ML models are production-ready and maintainable.",
   experienceLevel: "Senior",
@@ -81,7 +81,7 @@ export default function SophiaMartinezPage({
           
           <a
             href={navbarButtonUrl}
-            class="px-4 py-2 border border-[#292524] bg-[#292524] text-[#fafaf9] rounded-lg hover:bg-[#d0ec19]/90/80 transition-colors font-inter flex items-center"
+            class="px-4 py-2 border border-[#292524] bg-[#292524] text-[#fafaf9] rounded-lg hover:bg-[#292524]/80 transition-colors font-inter flex items-center"
           >
             <Icon id="ChevronLeft" size={16} class="mr-2" />
             {navbarButtonText}
@@ -118,7 +118,7 @@ export default function SophiaMartinezPage({
                         height={32}
                         class="w-8 h-8"
                       />
-                      <span class="ml-2 px-3 py-1 bg-[#d0ec19] text-[#1d1917] rounded-full text-sm font-semibold font-inter">
+                      <span class="ml-2 px-3 py-1 bg-[#1d1917] text-[#fafaf9] rounded-full text-sm font-semibold font-inter">
                         L1 Certified
                       </span>
                     </div>
@@ -154,21 +154,21 @@ export default function SophiaMartinezPage({
             <h3 class="text-2xl font-bold text-[#fafaf9] mb-4 font-inter">Skills</h3>
             <div class="flex flex-wrap gap-2">
               {builder.skills.map((skill) => (
-                <span class="px-3 py-1 bg-[#d0ec19] text-[#1d1917] rounded-full text-sm font-inter">
+                <span class="px-3 py-1 bg-[#1d1917] text-[#fafaf9] rounded-full text-sm font-inter">
                   {skill}
                 </span>
-              ))}
+              )}
             </div>
           </div>
 
           <div class="bg-[#292524] rounded-2xl p-8 mb-8">
             <h3 class="text-2xl font-bold text-[#fafaf9] mb-4 font-inter">Certifications</h3>
             <div class="flex flex-wrap gap-2">
-              {builder.certifications.map((cert) => (
-                <span class="px-3 py-1 bg-[#d0ec19] text-[#1d1917] rounded-full text-sm font-inter">
-                  {cert}
+              {builder.isL1Certified && (
+                <span class="px-3 py-1 bg-[#1d1917] text-[#fafaf9] rounded-full text-sm font-inter">
+                  Agentic Engineer L1
                 </span>
-              ))}
+              )}
             </div>
           </div>
 
@@ -181,7 +181,7 @@ export default function SophiaMartinezPage({
                     href={builder.socialLinks.linkedin}
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="px-4 py-2 bg-[#d0ec19] text-[#1d1917] rounded-lg font-semibold font-inter hover:bg-[#d0ec19]/90 transition-colors"
+                    class="px-4 py-2 bg-[#1d1917] text-[#fafaf9] rounded-lg font-semibold font-inter hover:bg-[#292524] transition-colors"
                   >
                     LinkedIn
                   </a>
@@ -191,7 +191,7 @@ export default function SophiaMartinezPage({
                     href={builder.socialLinks.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="px-4 py-2 border border-[#292524] text-[#fafaf9] rounded-lg font-inter hover:bg-[#d0ec19]/90 transition-colors"
+                    class="px-4 py-2 border border-[#292524] text-[#fafaf9] rounded-lg font-inter hover:bg-[#292524] transition-colors"
                   >
                     GitHub
                   </a>
@@ -201,7 +201,7 @@ export default function SophiaMartinezPage({
                     href={builder.socialLinks.website}
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="px-4 py-2 border border-[#292524] text-[#fafaf9] rounded-lg font-inter hover:bg-[#d0ec19]/90 transition-colors"
+                    class="px-4 py-2 border border-[#292524] text-[#fafaf9] rounded-lg font-inter hover:bg-[#292524] transition-colors"
                   >
                     Website
                   </a>
