@@ -1,6 +1,7 @@
 import { ImageWidget } from "apps/admin/widgets.ts";
 import Image from "apps/website/components/Image.tsx";
 import Icon from "site/components/ui/Icon.tsx";
+
 export interface Builder {
   id: string;
   name: string;
@@ -20,6 +21,7 @@ export interface Builder {
     twitter?: string;
   };
 }
+
 export interface Props {
   builder?: Builder;
   showBackButton?: boolean;
@@ -29,6 +31,7 @@ export interface Props {
   navbarButtonText?: string;
   navbarButtonUrl?: string;
 }
+
 const DAVID_KIM_BUILDER: Builder = {
   id: "david-kim",
   name: "David Kim",
@@ -48,13 +51,17 @@ const DAVID_KIM_BUILDER: Builder = {
     twitter: "https://twitter.com/david_kim_robotics"
   }
 };
+
 export default function DavidKimPage({
   builder = DAVID_KIM_BUILDER,
   showBackButton = true,
   backButtonUrl = "/",
   testProp = "David Kim Page",
+  
+  
   navbarButtonUrl = "/"
 }: Props) {
+  
   return (
     <div class="w-full bg-[#1d1917] min-h-screen">
       {/* Navbar */}
@@ -71,6 +78,7 @@ export default function DavidKimPage({
               />
             </a>
           </div>
+          
           <a
             href={navbarButtonUrl}
             class="px-4 py-2 border border-[#292524] bg-[#292524] text-[#fafaf9] rounded-lg hover:bg-[#292524]/80 transition-colors font-inter flex items-center"
@@ -80,6 +88,7 @@ export default function DavidKimPage({
           </a>
         </nav>
       )}
+
       {/* Builder Profile */}
       <div class="container mx-auto px-4 py-8">
         <div class="max-w-4xl mx-auto">
@@ -94,6 +103,7 @@ export default function DavidKimPage({
                   class="w-32 h-32 lg:w-40 lg:h-40 rounded-full object-cover"
                 />
               </div>
+              
               <div class="flex-1">
                 <div class="flex items-center gap-3 mb-4">
                   <h1 class="text-3xl lg:text-4xl font-bold text-[#fafaf9] font-inter">
@@ -114,12 +124,15 @@ export default function DavidKimPage({
                     </div>
                   )}
                 </div>
+                
                 <h2 class="text-xl text-[#d0ec19] font-inter mb-4">
                   {builder.title}
                 </h2>
+                
                 <p class="text-[#a49d9a] font-inter mb-4">
                   {builder.bio}
                 </p>
+                
                 {builder.location && (
                   <div class="flex items-center text-[#a49d9a] font-inter">
                     <Icon id="MapPin" size={16} class="mr-2" />
@@ -129,12 +142,14 @@ export default function DavidKimPage({
               </div>
             </div>
           </div>
+
           <div class="bg-[#292524] rounded-2xl p-8 mb-8">
             <h3 class="text-2xl font-bold text-[#fafaf9] mb-4 font-inter">About</h3>
             <p class="text-[#a49d9a] font-inter leading-relaxed">
               {builder.fullBio}
             </p>
           </div>
+
           <div class="bg-[#292524] rounded-2xl p-8 mb-8">
             <h3 class="text-2xl font-bold text-[#fafaf9] mb-4 font-inter">Skills</h3>
             <div class="flex flex-wrap gap-2">
@@ -145,16 +160,18 @@ export default function DavidKimPage({
               )}
             </div>
           </div>
+
           <div class="bg-[#292524] rounded-2xl p-8 mb-8">
             <h3 class="text-2xl font-bold text-[#fafaf9] mb-4 font-inter">Certifications</h3>
             <div class="flex flex-wrap gap-2">
-              {builder.isL1Certified && (
+              ){builder.isL1Certified && (
                 <span class="px-3 py-1 bg-[#1d1917] text-[#fafaf9] rounded-full text-sm font-inter">
                   Agentic Engineer L1
                 </span>
               )}
             </div>
           </div>
+
           {builder.socialLinks && (
             <div class="bg-[#292524] rounded-2xl p-8">
               <h3 class="text-2xl font-bold text-[#fafaf9] mb-4 font-inter">Connect</h3>

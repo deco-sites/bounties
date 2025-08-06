@@ -1,6 +1,7 @@
 import { ImageWidget } from "apps/admin/widgets.ts";
 import Image from "apps/website/components/Image.tsx";
 import Icon from "site/components/ui/Icon.tsx";
+
 export interface Builder {
   /**
    * @title Builder ID
@@ -68,6 +69,7 @@ export interface Builder {
     twitter?: string;
   };
 }
+
 export interface Props {
   /**
    * @title Builder Data
@@ -90,6 +92,7 @@ export interface Props {
    */
   testProp?: string;
 }
+
 // Default builder data
 const DEFAULT_BUILDER: Builder = {
   id: "sarah-chen",
@@ -110,18 +113,21 @@ const DEFAULT_BUILDER: Builder = {
     twitter: "https://twitter.com/sarah_chen_ai"
   }
 };
+
 export default function BuilderPage({
   builder = DEFAULT_BUILDER,
   showBackButton = true,
   backButtonUrl = "/",
   testProp = "Default Test Value"
 }: Props) {
+  
   return (
     <div class="w-full bg-[#1d1917] min-h-screen">
       {/* Test Banner - This should change when you modify testProp */}
       <div class="bg-[#1d1917] text-[#fafaf9] p-4 text-center font-bold">
         Test Prop Value: {testProp}
       </div>
+
       {/* Navbar */}
       {showBackButton && (
         <nav class="relative z-20 flex items-center justify-between px-6 py-4 lg:px-8">
@@ -137,6 +143,7 @@ export default function BuilderPage({
               />
             </a>
           </div>
+          
           {/* Back Button */}
           <a
             href={backButtonUrl}
@@ -147,6 +154,7 @@ export default function BuilderPage({
           </a>
         </nav>
       )}
+
       {/* Builder Profile */}
       <div class="container mx-auto px-4 py-8">
         {/* Header */}
@@ -163,6 +171,7 @@ export default function BuilderPage({
                   class="w-32 h-32 lg:w-40 lg:h-40 rounded-full object-cover"
                 />
               </div>
+              
               {/* Info */}
               <div class="flex-1">
                 <div class="flex items-center gap-3 mb-4">
@@ -175,12 +184,15 @@ export default function BuilderPage({
                     </span>
                   )}
                 </div>
+                
                 <h2 class="text-xl text-[#d0ec19] font-inter mb-4">
                   {builder.title}
                 </h2>
+                
                 <p class="text-[#a49d9a] font-inter mb-4">
                   {builder.bio}
                 </p>
+                
                 {builder.location && (
                   <div class="flex items-center text-[#a49d9a] font-inter">
                     <Icon id="MapPin" size={16} class="mr-2" />
@@ -190,6 +202,7 @@ export default function BuilderPage({
               </div>
             </div>
           </div>
+
           {/* Full Bio */}
           <div class="bg-[#292524] rounded-2xl p-8 mb-8">
             <h3 class="text-2xl font-bold text-[#fafaf9] mb-4 font-inter">About</h3>
@@ -197,6 +210,7 @@ export default function BuilderPage({
               {builder.fullBio}
             </p>
           </div>
+
           {/* Skills */}
           <div class="bg-[#292524] rounded-2xl p-8 mb-8">
             <h3 class="text-2xl font-bold text-[#fafaf9] mb-4 font-inter">Skills</h3>
@@ -208,17 +222,21 @@ export default function BuilderPage({
               )}
             </div>
           </div>
+
+
+
           {/* Certifications */}
           <div class="bg-[#292524] rounded-2xl p-8 mb-8">
             <h3 class="text-2xl font-bold text-[#fafaf9] mb-4 font-inter">Certifications</h3>
             <div class="flex flex-wrap gap-2">
-              {builder.isL1Certified && (
+              ){builder.isL1Certified && (
                 <span class="px-3 py-1 bg-[#1d1917] text-[#fafaf9] rounded-full text-sm font-inter">
                   Agentic Engineer L1
                 </span>
               )}
             </div>
           </div>
+
           {/* Social Links */}
           {builder.socialLinks && (
             <div class="bg-[#292524] rounded-2xl p-8">

@@ -1,4 +1,5 @@
 import BuildersGrid from "./BuildersGrid.tsx";
+
 /**
  * @title Builders Directory Page
  * @description Complete builders listing page with filters and search
@@ -9,22 +10,26 @@ export interface Props {
    * @default Browse AI Builders
    */
   title?: string;
+  
   /**
    * @title Page Description
    * @default Find the perfect AI professional for your project
    */
   description?: string;
+  
   /**
    * @title Default Layout
    * @default card
    */
   layout?: "card" | "list";
+  
   /**
    * @title Items per Page
    * @default 12
    */
   itemsPerPage?: number;
 }
+
 export default function BuildersPage({
   title = "Browse AI Builders",
   description = "Find the perfect AI professional for your project",
@@ -43,6 +48,7 @@ export default function BuildersPage({
             <p class="text-xl text-gray-600 mb-8">
               {description}
             </p>
+            
             {/* Breadcrumb */}
             <nav class="flex justify-center">
               <ol class="flex items-center space-x-2 text-sm text-gray-500">
@@ -56,6 +62,7 @@ export default function BuildersPage({
           </div>
         </div>
       </section>
+
       {/* Builders Grid */}
       <section class="bg-white">
         <BuildersGrid
